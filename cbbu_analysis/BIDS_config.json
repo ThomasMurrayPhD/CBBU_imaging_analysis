@@ -1,0 +1,179 @@
+{
+  "descriptions": [
+    {
+      "datatype": "anat",
+      "suffix": "MP2RAGE",
+      "custom_entities": "acq-whole_inv-01",
+      "criteria": {
+        "SeriesDescription": "mp2rage_sag_p3_0.75mm_INV1"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "anat",
+      "suffix": "MP2RAGE",
+      "custom_entities": "acq-whole_inv-02",
+      "criteria": {
+        "SeriesDescription": "mp2rage_sag_p3_0.75mm_INV2"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "anat",
+      "suffix": "MP2RAGE",
+      "custom_entities": "acq-whole_UNI",
+      "criteria": {
+        "SeriesDescription": "mp2rage_sag_p3_0.75mm_UNI_Images"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "anat",
+      "suffix": "MTS",
+      "custom_entities": "acq-LC_mt-on",
+      "criteria": {
+        "ProtocolName": "BP_tfl_20MTC_LC_SN_112slices"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "anat",
+      "suffix": "MTS",
+      "custom_entities": "acq-LC_mt-off",
+      "criteria": {
+        "ProtocolName": "BP_tfl_20MTC_LC_SN_noMT"
+      },
+      "dup_method": "run"
+    },
+    
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-facehouse_acq-1_dir-PA",
+      "criteria": {
+        "ProtocolName": "cmrr_1mm_mbep2d_bold_FLEET_MB3_run1",
+        "MultibandAccelerationFactor": 3,
+        "PhaseEncodingDirection": "j-"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "sbref",
+      "custom_entities": "task-facehouse_acq-1_dir-PA",
+      "criteria":{
+        "SeriesDescription": "cmrr_1mm_mbep2d_bold_FLEET_MB3_run1_SBRef",
+        "PhaseEncodingDirection": "j-"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-facehouse_acq-2_dir-PA",
+      "criteria": {
+        "ProtocolName": "cmrr_1mm_mbep2d_bold_FLEET_MB3_run2",
+        "MultibandAccelerationFactor": 3,
+        "PhaseEncodingDirection": "j-"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "sbref",
+      "custom_entities": "task-facehouse_acq-2_dir-PA",
+      "criteria":{
+        "SeriesDescription": "cmrr_1mm_mbep2d_bold_FLEET_MB3_run2_SBRef",
+        "PhaseEncodingDirection": "j-"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "acq-LC_dir-AP",
+      "criteria": {
+        "SeriesDescription": "cmrr_1mm__mbep2d_bold_FLEET_MB3_run1_invPE",
+        "MultibandAccelerationFactor": 3,
+        "PhaseEncodingDirection": "j"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "sbref",
+      "custom_entities": "acq-LC_dir-AP",
+      "criteria": {
+        "SeriesDescription": "cmrr_1mm__mbep2d_bold_FLEET_MB3_run1_invPE_SBRef",
+        "PhaseEncodingDirection": "j"
+      },
+      "dup_method": "run"
+    },
+    
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "acq-whole_dir-PA",
+      "criteria": {
+        "SeriesDescription": "quick_1mm_cmrr_mbep2d_bold_whole_head",
+        "PhaseEncodingDirection": "j-",
+        "MultibandAccelerationFactor": 3
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "sbref",
+      "custom_entities": "acq-whole_dir-PA",
+      "criteria": {
+        "SeriesDescription": "quick_1mm_cmrr_mbep2d_bold_whole_head_SBRef",
+        "PhaseEncodingDirection": "j-"
+      },
+      "dup_method": "run"
+    },
+    
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_dir-PA",
+      "criteria": {
+        "SeriesDescription": "MB_GRE_1.1_RS_MB5",
+        "PhaseEncodingDirection": "j-",
+        "MultibandAccelerationFactor": 5
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "sbref",
+      "custom_entities": "task-rest_dir-PA",
+      "criteria": {
+        "SeriesDescription": "MB_GRE_1.1_RS_MB5_SBRef",
+        "PhaseEncodingDirection": "j-"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_dir-AP",
+      "criteria": {
+        "SeriesDescription": "MB_GRE_1.1_RS_MB5_invPE",
+        "MultibandAccelerationFactor": 5,
+        "PhaseEncodingDirection": "j"
+      },
+      "dup_method": "run"
+    },
+    {
+      "datatype": "func",
+      "suffix": "sbref",
+      "custom_entities": "task-rest_dir-AP",
+      "criteria": {
+        "SeriesDescription": "MB_GRE_1.1_RS_MB5_invPE_SBRef",
+        "PhaseEncodingDirection": "j"
+      },
+      "dup_method": "run"
+    }
+  ]
+}
+

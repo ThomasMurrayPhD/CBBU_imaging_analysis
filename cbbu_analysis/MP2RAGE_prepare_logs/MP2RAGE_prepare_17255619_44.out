@@ -1,0 +1,24 @@
+Non-commercial use only - see $FSLDIR/LICENSE
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+Configuring model on the CPU
+Running SynthStrip model version 1
+Excluding CSF from brain boundary
+Input image read from: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-44/anat/sub-44_acq-whole_inv-02_MP2RAGE.nii.gz
+Processing frame (of 1): 1 done
+Masked image saved to: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-44/anat/sub-44_acq-whole_inv-02_MP2RAGE_brain.nii.gz
+Binary brain mask saved to: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-44/anat/sub-44_mask.nii.gz
+
+If you use SynthStrip in your analysis, please cite:
+----------------------------------------------------
+SynthStrip: Skull-Stripping for Any Brain Image
+A Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann
+NeuroImage 206 (2022), 119474
+https://doi.org/10.1016/j.neuroimage.2022.119474 
+
+Website: https://w3id.org/synthstrip
+
+Image Exception : #63 :: No image files match: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-44/anat/sub-44_acq-whole_UNI_MP2RAGE
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-44/anat/sub-44_acq-whole_UNI_MP2RAGE
+/var/spool/slurm/slurmd/job17255619/slurm_script: line 51: 616715 Aborted                 fslmaths "${uni_fname}.nii.gz" -mas "${BIDS_root}/${sub_id}/anat/${sub_id}_mask.nii.gz" "${uni_fname}_brain.nii.gz"

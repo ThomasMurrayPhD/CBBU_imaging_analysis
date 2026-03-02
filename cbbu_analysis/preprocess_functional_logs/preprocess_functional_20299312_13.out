@@ -1,0 +1,408 @@
+Non-commercial use only - see $FSLDIR/LICENSE
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+----------CENTRING IMAGES----------
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+Written new image at:
+	/home/tom29/rds/hpc-work/cbbu_BIDS/sub-13/func/sub-13_task-facehouse_acq-1_dir-PA_bold_centred.nii
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+Written new image at:
+	/home/tom29/rds/hpc-work/cbbu_BIDS/sub-13/func/sub-13_task-facehouse_acq-2_dir-PA_bold_centred.nii
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+Written new image at:
+	/home/tom29/rds/hpc-work/cbbu_BIDS/sub-13/func/sub-13_acq-LC_dir-AP_bold_centred.nii
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+Written new image at:
+	/home/tom29/rds/hpc-work/cbbu_BIDS/sub-13/func/sub-13_task-facehouse_acq-1_dir-PA_sbref_centred.nii
+
+----------SUSCEPTIBILITY DISTORTION CORRECTION----------
+SSD = 432.265	n = 323454	Reg = 0	Cost = 432.265
+SSD = 127.615	n = 323454	Reg = 10.0581	Cost = 137.673
+SSD = 83.0288	n = 323454	Reg = 18.7432	Cost = 101.772
+SSD = 74.1065	n = 323454	Reg = 22.6064	Cost = 96.7129
+SSD = 72.043	n = 323454	Reg = 23.803	Cost = 95.846
+SSD = 71.5292	n = 323454	Reg = 24.1285	Cost = 95.6577
+***Going to next resolution level***
+SSD = 129.793	n = 323454	Reg = 13.7289	Cost = 143.522
+SSD = 65.4178	n = 323454	Reg = 11.1447	Cost = 76.5625
+SSD = 52.4463	n = 323454	Reg = 14.7822	Cost = 67.2285
+SSD = 49.3678	n = 323454	Reg = 16.3157	Cost = 65.6835
+SSD = 48.47	n = 323454	Reg = 16.8271	Cost = 65.2971
+SSD = 48.1438	n = 323454	Reg = 17.0199	Cost = 65.1637
+***Going to next resolution level***
+SSD = 119.361	n = 323454	Reg = 4.21969	Cost = 123.581
+SSD = 88.8693	n = 323454	Reg = 7.4775	Cost = 96.3468
+SSD = 81.0284	n = 323454	Reg = 10.0462	Cost = 91.0746
+SSD = 78.7191	n = 323454	Reg = 11.0326	Cost = 89.7517
+SSD = 77.7621	n = 323454	Reg = 11.461	Cost = 89.223
+SSD = 77.1996	n = 323454	Reg = 11.7269	Cost = 88.9266
+***Going to next resolution level***
+SSD = 134.755	n = 323454	Reg = 7.22195	Cost = 141.977
+SSD = 54.6268	n = 323454	Reg = 3.6292	Cost = 58.256
+SSD = 43.571	n = 323454	Reg = 5.16303	Cost = 48.734
+SSD = 40.8043	n = 323454	Reg = 5.95143	Cost = 46.7557
+SSD = 39.6474	n = 323454	Reg = 6.31088	Cost = 45.9583
+SSD = 38.9844	n = 323454	Reg = 6.53086	Cost = 45.5153
+SSD = 38.5386	n = 323454	Reg = 6.69455	Cost = 45.2331
+SSD = 38.1985	n = 323454	Reg = 6.83038	Cost = 45.0288
+SSD = 37.9174	n = 323454	Reg = 6.95172	Cost = 44.8691
+SSD = 37.6746	n = 323454	Reg = 7.06247	Cost = 44.737
+SSD = 37.4488	n = 323454	Reg = 7.16792	Cost = 44.6167
+***Going to next resolution level***
+SSD = 137.241	n = 2685840	Reg = 191.85	Cost = 329.091
+SSD = 65.5092	n = 2685840	Reg = 36.2178	Cost = 101.727
+SSD = 55.8405	n = 2685840	Reg = 28.8175	Cost = 84.658
+SSD = 54.2793	n = 2685840	Reg = 26.4306	Cost = 80.7098
+SSD = 54.312	n = 2685840	Reg = 24.7944	Cost = 79.1065
+SSD = 54.6824	n = 2685840	Reg = 23.5734	Cost = 78.2558
+SSD = 55.0446	n = 2685840	Reg = 22.7791	Cost = 77.8237
+SSD = 55.3098	n = 2685840	Reg = 22.2672	Cost = 77.5771
+SSD = 55.5014	n = 2685840	Reg = 21.9273	Cost = 77.4287
+SSD = 55.6463	n = 2685840	Reg = 21.6917	Cost = 77.338
+SSD = 55.7603	n = 2685840	Reg = 21.5218	Cost = 77.282
+***Going to next resolution level***
+SSD = 55.7603	n = 2685840	Reg = 2.15218	Cost = 57.9124
+SSD = 55.5858	n = 2685840	Reg = 2.16423	Cost = 57.75
+SSD = 55.4346	n = 2685840	Reg = 2.17725	Cost = 57.6119
+SSD = 55.2547	n = 2685840	Reg = 2.19275	Cost = 57.4475
+SSD = 54.947	n = 2685840	Reg = 2.22341	Cost = 57.1704
+SSD = 54.4781	n = 2685840	Reg = 2.27645	Cost = 56.7546
+SSD = 53.9803	n = 2685840	Reg = 2.347	Cost = 56.3273
+SSD = 53.5808	n = 2685840	Reg = 2.42195	Cost = 56.0028
+SSD = 53.2931	n = 2685840	Reg = 2.48807	Cost = 55.7811
+SSD = 53.036	n = 2685840	Reg = 2.5552	Cost = 55.5912
+SSD = 52.7927	n = 2685840	Reg = 2.62302	Cost = 55.4157
+SSD = 52.5659	n = 2685840	Reg = 2.68789	Cost = 55.2538
+SSD = 52.324	n = 2685840	Reg = 2.75787	Cost = 55.0819
+SSD = 52.1009	n = 2685840	Reg = 2.823	Cost = 54.9239
+SSD = 51.8902	n = 2685840	Reg = 2.88454	Cost = 54.7747
+SSD = 51.6854	n = 2685840	Reg = 2.9442	Cost = 54.6296
+SSD = 51.4794	n = 2685840	Reg = 3.00387	Cost = 54.4833
+SSD = 51.2839	n = 2685840	Reg = 3.06024	Cost = 54.3442
+SSD = 51.0715	n = 2685840	Reg = 3.1214	Cost = 54.1929
+SSD = 50.8717	n = 2685840	Reg = 3.17865	Cost = 54.0503
+SSD = 50.7012	n = 2685840	Reg = 3.22719	Cost = 53.9284
+***Going to next resolution level***
+SSD = 324.059	n = 2685840	Reg = 20.316	Cost = 344.375
+SSD = 269.136	n = 2685840	Reg = 16.8893	Cost = 286.025
+SSD = 244.893	n = 2685840	Reg = 15.3884	Cost = 260.281
+SSD = 223.685	n = 2685840	Reg = 14.0922	Cost = 237.777
+SSD = 209.699	n = 2685840	Reg = 13.2545	Cost = 222.954
+SSD = 199.093	n = 2685840	Reg = 12.6359	Cost = 211.729
+SSD = 190.122	n = 2685840	Reg = 12.1275	Cost = 202.249
+SSD = 183.079	n = 2685840	Reg = 11.7393	Cost = 194.818
+SSD = 176.956	n = 2685840	Reg = 11.4081	Cost = 188.365
+SSD = 172.08	n = 2685840	Reg = 11.1527	Cost = 183.232
+SSD = 168.272	n = 2685840	Reg = 10.9579	Cost = 179.23
+SSD = 164.151	n = 2685840	Reg = 10.7528	Cost = 174.904
+SSD = 160.709	n = 2685840	Reg = 10.5863	Cost = 171.295
+SSD = 157.754	n = 2685840	Reg = 10.4475	Cost = 168.202
+SSD = 154.856	n = 2685840	Reg = 10.3158	Cost = 165.172
+SSD = 152.313	n = 2685840	Reg = 10.204	Cost = 162.517
+SSD = 149.813	n = 2685840	Reg = 10.0978	Cost = 159.911
+SSD = 147.562	n = 2685840	Reg = 10.0058	Cost = 157.568
+SSD = 145.552	n = 2685840	Reg = 9.92705	Cost = 155.479
+SSD = 143.568	n = 2685840	Reg = 9.85273	Cost = 153.421
+SSD = 141.752	n = 2685840	Reg = 9.78786	Cost = 151.54
+***Going to next resolution level***
+SSD = 204.147	n = 2685840	Reg = 0.140962	Cost = 204.288
+SSD = 200.564	n = 2685840	Reg = 0.138673	Cost = 200.703
+SSD = 197.151	n = 2685840	Reg = 0.136638	Cost = 197.287
+SSD = 194.585	n = 2685840	Reg = 0.13529	Cost = 194.72
+SSD = 192.502	n = 2685840	Reg = 0.134381	Cost = 192.636
+SSD = 190.72	n = 2685840	Reg = 0.133812	Cost = 190.854
+SSD = 189.346	n = 2685840	Reg = 0.133555	Cost = 189.48
+SSD = 188.14	n = 2685840	Reg = 0.133501	Cost = 188.273
+SSD = 187.28	n = 2685840	Reg = 0.133599	Cost = 187.414
+SSD = 186.374	n = 2685840	Reg = 0.13385	Cost = 186.507
+SSD = 185.209	n = 2685840	Reg = 0.134325	Cost = 185.343
+SSD = 182.958	n = 2685840	Reg = 0.135532	Cost = 183.093
+SSD = 180.882	n = 2685840	Reg = 0.136945	Cost = 181.019
+SSD = 178.499	n = 2685840	Reg = 0.138875	Cost = 178.637
+SSD = 176.451	n = 2685840	Reg = 0.140843	Cost = 176.592
+SSD = 174.487	n = 2685840	Reg = 0.142949	Cost = 174.63
+SSD = 172.691	n = 2685840	Reg = 0.145117	Cost = 172.836
+SSD = 170.901	n = 2685840	Reg = 0.147403	Cost = 171.048
+SSD = 169.04	n = 2685840	Reg = 0.149948	Cost = 169.19
+SSD = 167.552	n = 2685840	Reg = 0.152104	Cost = 167.704
+SSD = 166.376	n = 2685840	Reg = 0.153858	Cost = 166.53
+SSD = 165.412	n = 2685840	Reg = 0.155339	Cost = 165.567
+SSD = 164.421	n = 2685840	Reg = 0.156919	Cost = 164.578
+SSD = 163.48	n = 2685840	Reg = 0.158469	Cost = 163.639
+SSD = 162.52	n = 2685840	Reg = 0.160102	Cost = 162.68
+SSD = 161.569	n = 2685840	Reg = 0.16183	Cost = 161.731
+SSD = 160.637	n = 2685840	Reg = 0.163487	Cost = 160.8
+SSD = 159.749	n = 2685840	Reg = 0.165151	Cost = 159.914
+SSD = 158.853	n = 2685840	Reg = 0.166875	Cost = 159.02
+SSD = 157.946	n = 2685840	Reg = 0.168666	Cost = 158.115
+SSD = 157.037	n = 2685840	Reg = 0.170528	Cost = 157.207
+SSD = 156.179	n = 2685840	Reg = 0.17234	Cost = 156.351
+SSD = 155.341	n = 2685840	Reg = 0.174136	Cost = 155.515
+SSD = 154.54	n = 2685840	Reg = 0.175899	Cost = 154.716
+SSD = 153.759	n = 2685840	Reg = 0.177662	Cost = 153.937
+SSD = 152.997	n = 2685840	Reg = 0.179419	Cost = 153.177
+SSD = 152.25	n = 2685840	Reg = 0.181174	Cost = 152.431
+SSD = 151.515	n = 2685840	Reg = 0.182944	Cost = 151.698
+SSD = 150.822	n = 2685840	Reg = 0.184656	Cost = 151.007
+SSD = 150.157	n = 2685840	Reg = 0.186344	Cost = 150.344
+SSD = 149.497	n = 2685840	Reg = 0.188034	Cost = 149.685
+SSD = 148.865	n = 2685840	Reg = 0.189685	Cost = 149.055
+SSD = 148.23	n = 2685840	Reg = 0.191393	Cost = 148.422
+SSD = 147.629	n = 2685840	Reg = 0.193037	Cost = 147.822
+SSD = 147.031	n = 2685840	Reg = 0.194724	Cost = 147.225
+SSD = 146.434	n = 2685840	Reg = 0.196438	Cost = 146.63
+SSD = 145.865	n = 2685840	Reg = 0.198129	Cost = 146.063
+SSD = 145.315	n = 2685840	Reg = 0.199817	Cost = 145.515
+SSD = 144.773	n = 2685840	Reg = 0.201528	Cost = 144.975
+SSD = 144.275	n = 2685840	Reg = 0.203153	Cost = 144.478
+SSD = 143.777	n = 2685840	Reg = 0.204826	Cost = 143.982
+***Going to next resolution level***
+SSD = 143.778	n = 2685840	Reg = 0.004094	Cost = 143.782
+SSD = 143.539	n = 2685840	Reg = 0.00408722	Cost = 143.543
+SSD = 143.11	n = 2685840	Reg = 0.0040752	Cost = 143.114
+SSD = 142.798	n = 2685840	Reg = 0.00406656	Cost = 142.802
+SSD = 142.474	n = 2685840	Reg = 0.00405775	Cost = 142.478
+SSD = 142.136	n = 2685840	Reg = 0.0040489	Cost = 142.14
+SSD = 141.824	n = 2685840	Reg = 0.00404107	Cost = 141.828
+SSD = 141.511	n = 2685840	Reg = 0.00403368	Cost = 141.515
+SSD = 141.206	n = 2685840	Reg = 0.0040269	Cost = 141.21
+SSD = 140.941	n = 2685840	Reg = 0.00402147	Cost = 140.945
+SSD = 140.662	n = 2685840	Reg = 0.00401616	Cost = 140.666
+SSD = 140.351	n = 2685840	Reg = 0.00401078	Cost = 140.355
+SSD = 140.052	n = 2685840	Reg = 0.00400615	Cost = 140.056
+SSD = 139.779	n = 2685840	Reg = 0.00400241	Cost = 139.783
+SSD = 139.492	n = 2685840	Reg = 0.003999	Cost = 139.496
+SSD = 139.224	n = 2685840	Reg = 0.00399635	Cost = 139.228
+SSD = 138.979	n = 2685840	Reg = 0.00399444	Cost = 138.983
+SSD = 138.724	n = 2685840	Reg = 0.00399303	Cost = 138.728
+SSD = 138.483	n = 2685840	Reg = 0.00399224	Cost = 138.487
+SSD = 138.233	n = 2685840	Reg = 0.00399209	Cost = 138.237
+SSD = 137.962	n = 2685840	Reg = 0.00399273	Cost = 137.966
+SSD = 137.714	n = 2685840	Reg = 0.00399407	Cost = 137.718
+SSD = 137.462	n = 2685840	Reg = 0.00399626	Cost = 137.466
+SSD = 137.212	n = 2685840	Reg = 0.0039994	Cost = 137.216
+SSD = 136.979	n = 2685840	Reg = 0.00400325	Cost = 136.983
+SSD = 136.737	n = 2685840	Reg = 0.00400825	Cost = 136.741
+SSD = 136.482	n = 2685840	Reg = 0.00401467	Cost = 136.486
+SSD = 136.236	n = 2685840	Reg = 0.00402205	Cost = 136.24
+SSD = 135.994	n = 2685840	Reg = 0.00403052	Cost = 135.998
+SSD = 135.741	n = 2685840	Reg = 0.00404077	Cost = 135.745
+SSD = 135.513	n = 2685840	Reg = 0.00405125	Cost = 135.517
+SSD = 135.259	n = 2685840	Reg = 0.00406437	Cost = 135.263
+SSD = 134.986	n = 2685840	Reg = 0.00407999	Cost = 134.99
+SSD = 134.683	n = 2685840	Reg = 0.0040991	Cost = 134.688
+SSD = 134.374	n = 2685840	Reg = 0.00412044	Cost = 134.378
+SSD = 134.076	n = 2685840	Reg = 0.0041431	Cost = 134.08
+SSD = 133.783	n = 2685840	Reg = 0.00416731	Cost = 133.787
+SSD = 133.49	n = 2685840	Reg = 0.00419367	Cost = 133.494
+SSD = 133.176	n = 2685840	Reg = 0.00422423	Cost = 133.18
+SSD = 132.889	n = 2685840	Reg = 0.00425439	Cost = 132.893
+SSD = 132.592	n = 2685840	Reg = 0.00428796	Cost = 132.596
+SSD = 132.349	n = 2685840	Reg = 0.00431739	Cost = 132.353
+SSD = 132.141	n = 2685840	Reg = 0.00434416	Cost = 132.146
+SSD = 131.937	n = 2685840	Reg = 0.00437246	Cost = 131.941
+SSD = 131.718	n = 2685840	Reg = 0.00440441	Cost = 131.723
+SSD = 131.5	n = 2685840	Reg = 0.00443858	Cost = 131.504
+SSD = 131.276	n = 2685840	Reg = 0.00447538	Cost = 131.281
+SSD = 131.052	n = 2685840	Reg = 0.00451474	Cost = 131.056
+SSD = 130.82	n = 2685840	Reg = 0.00455765	Cost = 130.825
+SSD = 130.567	n = 2685840	Reg = 0.00460736	Cost = 130.572
+SSD = 130.258	n = 2685840	Reg = 0.00467116	Cost = 130.263
+SSD = 129.834	n = 2685840	Reg = 0.00476335	Cost = 129.839
+SSD = 129.46	n = 2685840	Reg = 0.00484836	Cost = 129.465
+SSD = 129.132	n = 2685840	Reg = 0.00492566	Cost = 129.137
+SSD = 128.766	n = 2685840	Reg = 0.00501425	Cost = 128.771
+SSD = 128.442	n = 2685840	Reg = 0.00509484	Cost = 128.447
+SSD = 128.144	n = 2685840	Reg = 0.00517071	Cost = 128.149
+SSD = 127.849	n = 2685840	Reg = 0.00524774	Cost = 127.854
+SSD = 127.561	n = 2685840	Reg = 0.00532482	Cost = 127.566
+SSD = 127.191	n = 2685840	Reg = 0.00542639	Cost = 127.197
+SSD = 126.818	n = 2685840	Reg = 0.00553082	Cost = 126.823
+SSD = 126.46	n = 2685840	Reg = 0.00563318	Cost = 126.465
+SSD = 126.113	n = 2685840	Reg = 0.00573367	Cost = 126.119
+SSD = 125.841	n = 2685840	Reg = 0.00581452	Cost = 125.847
+SSD = 125.551	n = 2685840	Reg = 0.00590178	Cost = 125.557
+SSD = 125.31	n = 2685840	Reg = 0.00597535	Cost = 125.316
+SSD = 125.059	n = 2685840	Reg = 0.00605293	Cost = 125.065
+SSD = 124.795	n = 2685840	Reg = 0.00613601	Cost = 124.801
+SSD = 124.549	n = 2685840	Reg = 0.00621415	Cost = 124.556
+SSD = 124.319	n = 2685840	Reg = 0.00628855	Cost = 124.326
+SSD = 124.109	n = 2685840	Reg = 0.00635759	Cost = 124.115
+SSD = 123.874	n = 2685840	Reg = 0.00643571	Cost = 123.88
+SSD = 123.662	n = 2685840	Reg = 0.00650637	Cost = 123.669
+SSD = 123.444	n = 2685840	Reg = 0.00658043	Cost = 123.451
+SSD = 123.221	n = 2685840	Reg = 0.00665651	Cost = 123.228
+SSD = 123.014	n = 2685840	Reg = 0.00672762	Cost = 123.02
+SSD = 122.824	n = 2685840	Reg = 0.00679301	Cost = 122.831
+SSD = 122.638	n = 2685840	Reg = 0.00685781	Cost = 122.645
+SSD = 122.446	n = 2685840	Reg = 0.00692438	Cost = 122.453
+SSD = 122.271	n = 2685840	Reg = 0.00698522	Cost = 122.278
+SSD = 122.093	n = 2685840	Reg = 0.00704694	Cost = 122.1
+SSD = 121.919	n = 2685840	Reg = 0.00710808	Cost = 121.926
+SSD = 121.771	n = 2685840	Reg = 0.0071593	Cost = 121.778
+SSD = 121.622	n = 2685840	Reg = 0.00721143	Cost = 121.629
+SSD = 121.469	n = 2685840	Reg = 0.0072645	Cost = 121.477
+SSD = 121.317	n = 2685840	Reg = 0.00731743	Cost = 121.325
+SSD = 121.173	n = 2685840	Reg = 0.00736759	Cost = 121.18
+SSD = 121.02	n = 2685840	Reg = 0.00742054	Cost = 121.027
+SSD = 120.869	n = 2685840	Reg = 0.00747283	Cost = 120.877
+SSD = 120.718	n = 2685840	Reg = 0.00752534	Cost = 120.725
+SSD = 120.558	n = 2685840	Reg = 0.00758077	Cost = 120.565
+SSD = 120.407	n = 2685840	Reg = 0.00763322	Cost = 120.414
+SSD = 120.238	n = 2685840	Reg = 0.00769232	Cost = 120.245
+SSD = 120.085	n = 2685840	Reg = 0.00774535	Cost = 120.093
+SSD = 119.942	n = 2685840	Reg = 0.00779501	Cost = 119.95
+SSD = 119.793	n = 2685840	Reg = 0.00784708	Cost = 119.801
+SSD = 119.641	n = 2685840	Reg = 0.00789994	Cost = 119.649
+SSD = 119.507	n = 2685840	Reg = 0.00794699	Cost = 119.515
+SSD = 119.371	n = 2685840	Reg = 0.00799448	Cost = 119.379
+SSD = 119.235	n = 2685840	Reg = 0.00804177	Cost = 119.243
+SSD = 119.099	n = 2685840	Reg = 0.00808932	Cost = 119.107
+----------REALIGNMENT----------
+----------REGISTERING EPI TO ANATOMICAL----------
+----------REGISTERING EPI TO MNI----------
+Processing volume 0
+Processing volume 1
+Processing volume 2
+Processing volume 3
+Processing volume 4
+Processing volume 5
+Processing volume 6
+Processing volume 7
+Processing volume 8
+Processing volume 9
+Processing volume 10
+Processing volume 11
+Processing volume 12
+Processing volume 13
+Processing volume 14
+Processing volume 15
+Processing volume 16
+Processing volume 17
+Processing volume 18
+Processing volume 19
+Processing volume 20
+Processing volume 21
+Processing volume 22
+Processing volume 23
+Processing volume 24
+Processing volume 25
+Processing volume 26
+Processing volume 27
+Processing volume 28
+Processing volume 29
+Processing volume 30
+Processing volume 31
+Processing volume 32
+Processing volume 33
+Processing volume 34
+Processing volume 35
+Processing volume 36
+Processing volume 37
+Processing volume 38
+Processing volume 39
+Processing volume 40
+Processing volume 41
+Processing volume 42
+Processing volume 43
+Processing volume 44
+Processing volume 45
+Processing volume 46
+Processing volume 47
+Processing volume 48
+Processing volume 49
+Processing volume 50
+Processing volume 51
+Processing volume 52
+Processing volume 53
+Processing volume 54
+Processing volume 55
+Processing volume 56
+Processing volume 57
+Processing volume 58
+Processing volume 59
+Processing volume 60
+Processing volume 61
+Processing volume 62
+Processing volume 63
+Processing volume 64
+Processing volume 65
+Processing volume 66
+Processing volume 67
+Processing volume 68
+Processing volume 69
+Processing volume 70
+Processing volume 71
+Processing volume 72
+Processing volume 73
+Processing volume 74
+Processing volume 75
+Processing volume 76
+Processing volume 77
+Processing volume 78
+Processing volume 79
+Processing volume 80
+Processing volume 81
+Processing volume 82
+Processing volume 83
+Processing volume 84
+Processing volume 85
+Processing volume 86
+Processing volume 87
+Processing volume 88
+Processing volume 89
+Processing volume 90
+Processing volume 91
+Processing volume 92
+Processing volume 93
+Processing volume 94
+Processing volume 95
+Processing volume 96
+Processing volume 97
+Processing volume 98
+Processing volume 99
+Processing volume 100
+Processing volume 101
+Processing volume 102
+Processing volume 103
+Processing volume 104
+Processing volume 105
+Processing volume 106
+Processing volume 107
+Processing volume 108
+Processing volume 109
+Processing volume 110
+Processing volume 111
+Processing volume 112
+Processing volume 113
+Processing volume 114
+Processing volume 115
+Processing volume 116
+Error: short write, output file will be truncated
+** ERROR: NWAD: wrote only 0 of 57768256 bytes to file
+Processing volume 117
+Error: short write, output file will be truncated
+** ERROR: NWAD: wrote only 0 of 57768256 bytes to file
+Processing volume 118
+Error: short write, output file will be truncated
+** ERROR: NWAD: wrote only 0 of 57768256 bytes to file
+Processing volume 119
+Error: short write, output file will be truncated
+** ERROR: NWAD: wrote only 0 of 57768256 bytes to file
+Processing volume 120
+Error: short write, output file will be truncated
+** ERROR: NWAD: wrote only 0 of 57768256 bytes to file
+Processing volume 121
+Error: short write, output file will be truncated
+ file /home/tom29/rds/hpc-work/cbbu_BIDS/sub-13/func/sub-13_task-facehouse_acq-1_dir-PA_bold_vol-121.nii.gz is not recognized as a supported image format . 
+terminate called after throwing an instance of 'itk::ExceptionObject'
+  what():  /workspace/build/ITKv5/Modules/Core/Common/src/itkProcessObject.cxx:1339:
+ITK ERROR: ResampleImageFilter(0x3e1c3f0): Input Primary is required but not set.
+/var/spool/slurm/slurmd/job20299325/slurm_script: line 214: 131818 Aborted                 antsApplyTransforms -d 3 -i "${tmp_vol}" -r "${FSLDIR}/data/standard/MNI152_T1_1mm_brain.nii.gz" -t "${template_to_MNI_SyN}" -t "${template_to_MNI_affine}" -t "${MP2RAGE_to_template_SyN}" -t "${MP2RAGE_to_template_affine}" -t "${BIDS_root}/${sub_id}/func/${sub_id}_func_to_anatomical_ANTS.mat" -o "${run1_fname}_MNI_vol-${v}.nii.gz" -n Linear

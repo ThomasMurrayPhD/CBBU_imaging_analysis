@@ -1,0 +1,6 @@
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+Non-commercial use only - see $FSLDIR/LICENSE
+N4 bias corrrection
+ file /home/tom29/rds/hpc-work/cbbu_BIDS/sub-37/anat/sub-37_acq-LC_mt-on_MTS.nii.gz does not exist . 
+/var/spool/slurm/slurmd/job20298425/slurm_script: line 85: 16649 Segmentation fault      N4BiasFieldCorrection -d 3 -i "${MTon_fname}.nii.gz" -o "${MTon_fname}_N4.nii.gz" -r 1 -c [50x50x30x20,1e-6] -b [200]

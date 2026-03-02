@@ -1,0 +1,16 @@
+Non-commercial use only - see $FSLDIR/LICENSE
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+Configuring model on the CPU
+Running SynthStrip model version 1
+Excluding CSF from brain boundary
+Traceback (most recent call last):
+  File "/home/tom29/freesurfer/python/scripts/mri_synthstrip", line 215, in <module>
+    image = sf.load_volume(args.image)
+  File "/home/tom29/freesurfer/python/lib/python3.8/site-packages/surfa/io/framed.py", line 39, in load_volume
+    return load_framed_array(filename=filename, atype=Volume, fmt=fmt)
+  File "/home/tom29/freesurfer/python/lib/python3.8/site-packages/surfa/io/framed.py", line 101, in load_framed_array
+    check_file_readability(filename)
+  File "/home/tom29/freesurfer/python/lib/python3.8/site-packages/surfa/io/utils.py", line 17, in check_file_readability
+    raise FileNotFoundError(f'{filename} is not a file')
+FileNotFoundError: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-43/anat/sub-43_acq-whole_inv-02_MP2RAGE.nii.gz is not a file

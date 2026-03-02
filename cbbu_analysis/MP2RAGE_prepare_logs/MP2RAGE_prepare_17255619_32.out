@@ -1,0 +1,55 @@
+Non-commercial use only - see $FSLDIR/LICENSE
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+Configuring model on the CPU
+Running SynthStrip model version 1
+Excluding CSF from brain boundary
+Input image read from: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-32/anat/sub-32_acq-whole_inv-02_MP2RAGE.nii.gz
+Processing frame (of 1): 1 done
+Masked image saved to: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-32/anat/sub-32_acq-whole_inv-02_MP2RAGE_brain.nii.gz
+Binary brain mask saved to: /home/tom29/rds/hpc-work/cbbu_BIDS/sub-32/anat/sub-32_mask.nii.gz
+
+If you use SynthStrip in your analysis, please cite:
+----------------------------------------------------
+SynthStrip: Skull-Stripping for Any Brain Image
+A Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann
+NeuroImage 206 (2022), 119474
+https://doi.org/10.1016/j.neuroimage.2022.119474 
+
+Website: https://w3id.org/synthstrip
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+SPM12: spm_coreg (v7320)                           14:18:17 - 06/11/2025
+========================================================================
+Completed                               :          14:18:26 - 06/11/2025
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+Written new image at:
+	/home/tom29/rds/hpc-work/cbbu_BIDS/sub-32/anat/sub-32_acq-whole_UNI_MP2RAGE_brain_N4_centred.nii
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+Written new image at:
+	/home/tom29/rds/hpc-work/cbbu_BIDS/sub-32/anat/sub-32_acq-whole_inv-02_MP2RAGE_brain_centred.nii
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+Written new image at:
+	/home/tom29/rds/hpc-work/cbbu_BIDS/sub-32/anat/sub-32_mask_centred.nii
+
+SynthSeg-robust 2.0
+using 4 threads
+predicting 1/1
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 58s 58s/step
+
+segmentation  saved in:    /home/tom29/rds/hpc-work/cbbu_BIDS/sub-32/anat/sub-32_acq-whole_UNI_MP2RAGE_brain_N4_centred_segmented.nii.gz
+
+If you use this tool in a publication, please cite:
+SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining
+B. Billot, D.N. Greve, O. Puonti, A. Thielscher, K. Van Leemput, B. Fischl, A.V. Dalca, J.E. Iglesias
+Medical Image Analysis, accepted for publication.
+
+Robust machine learning segmentation for large-scale analysis of heterogeneous clinical brain MRI datasets
+B. Billot, C. Magdamo, Y. Cheng, S.E. Arnold, S. Das, J.E. Iglesias
+PNAS, accepted for publication.

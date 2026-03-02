@@ -1,0 +1,38 @@
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+---- Processing run 1 for sub-01 ----
+MATLAB is selecting SOFTWARE OPENGL rendering.
+TR = 3.000 +/- 0.000 s (Estimated mean +/- std time of repetition for one volume; nTriggers = 200)
+[Warning: No gradient timecourse was logged in the logfile. Using nominal timing
+from sqpar instead] 
+[> In tapas_physio_log (line 58)
+  In tapas_physio_create_scan_timing_from_acq_codes (line 91)
+  In tapas_physio_create_scan_timing (line 106)
+  In tapas_physio_main_create_regressors (line 166)
+  In cbbu_get_physio_regressors (line 114)] 
+    maxscan (incl. dummies) = 210 
+    tmin (1st scan start (1st dummy))=   0.93 s
+    tmin (1st scan start (after dummies))=   0.93 s
+    tmax = 630.88 s 
+    mean TR =   3.00 s
+
+Note: Guessed 1 additional cardiac pulse(s) at time series end for phase estimation
+[Warning: 'sub_01_task_facehouse_acq_1_dir_PA_bold_centred_unwarped_realigned'
+exceeds MATLAB's maximum name length of 63 characters and has been truncated to
+'sub_01_task_facehouse_acq_1_dir_PA_bold_centred_unwarped_realig'.] 
+[> In tapas_physio_create_movement_regressors (line 90)
+  In tapas_physio_main_create_regressors (line 383)
+  In cbbu_get_physio_regressors (line 114)] 
+{Error using horzcat
+Dimensions of arrays being concatenated are not consistent.
+
+Error in tapas_physio_main_create_regressors>append_regressors (line 466)
+R = [R, regressors];
+
+Error in tapas_physio_main_create_regressors (line 385)
+        [model.R, model.R_column_names] = append_regressors(model.R,
+        model.R_column_names, ...
+
+Error in cbbu_get_physio_regressors (line 114)
+[physio, R, ons_secs] = tapas_physio_main_create_regressors(physio);
+} 

@@ -1,0 +1,21 @@
+Non-commercial use only - see $FSLDIR/LICENSE
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+----------REGISTERING EPI TO MNI----------
+** ERROR: NWAD: wrote only 0 of 1770699584 bytes to file
+** ERROR: NWAD: wrote only 0 of 1770699584 bytes to file
+----------SMOOTHING----------
+MATLAB is selecting SOFTWARE OPENGL rendering.
+{Error using gunzip>gunzipwrite (line 239)
+Unexpected end of input stream when attempting to GUNZIP the file
+"/home/tom29/rds/hpc-work/cbbu_BIDS/sub-08/func/sub-08_task-facehouse_acq-1_dir-PA_bold_centred_unwarped_realigned_normalised.nii".
+
+Error in gunzip>gunzipEntries (line 155)
+    names{k} = gunzipwrite(entries(k).file, outputDir, baseName, streamCopier);
+
+Error in gunzip (line 91)
+   names = gunzipEntries(entries, outputDir);
+
+Error in smooth_images (line 6)
+    gunzip(input_fname);
+} 

@@ -1,0 +1,4 @@
+Non-commercial use only - see $FSLDIR/LICENSE
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+ERROR: Missing file /home/tom29/rds/hpc-work/cbbu_analysis/study_template/T1TMP_sub-09_acq-whole_UNI_MP2RAGE_brain_N4_centred80GenericAffine.mat

@@ -1,0 +1,12 @@
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+Using physio regressors for sub-15
+Run1 trials file: /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-15/beh/sub-15_facehouse-MRI_run1_15-05-24_15-56-24.mat
+Run2 trials file: /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-15/beh/sub-15_facehouse-MRI_run2_15-05-24_16-08-03.mat
+MATLAB is selecting SOFTWARE OPENGL rendering.
+{Error using importdata (line 139)
+Unable to open file.
+
+Error in specify_first_level_2runs (line 139)
+    pm_1 = importdata(run1_modulators); % load .mat
+} 

@@ -1,0 +1,18 @@
+Non-commercial use only - see $FSLDIR/LICENSE
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+----------CENTRING IMAGES----------
+MATLAB is selecting SOFTWARE OPENGL rendering.
+{Error using gunzip>gunzipwrite (line 239)
+Unexpected end of input stream when attempting to GUNZIP the file
+"/home/tom29/rds/hpc-work/cbbu_BIDS/sub-09/func/sub-09_task-rest_dir-PA_bold.nii".
+
+Error in gunzip>gunzipEntries (line 155)
+    names{k} = gunzipwrite(entries(k).file, outputDir, baseName, streamCopier);
+
+Error in gunzip (line 91)
+   names = gunzipEntries(entries, outputDir);
+
+Error in affine_transform_nii (line 20)
+    gunzip(nii);
+} 

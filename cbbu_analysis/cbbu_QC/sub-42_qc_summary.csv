@@ -1,0 +1,3 @@
+sub,run,mean_FD,max_FD,FD_outliers,epi_mni_corr,t1_mni_corr,flag
+sub-42,1,0.0666001,0.472673 ,0,0.61,0.72,OK
+sub-42,2,0.0661856,0.3541 ,0,0.61,0.72,OK

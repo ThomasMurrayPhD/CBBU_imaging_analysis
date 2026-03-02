@@ -1,0 +1,4 @@
+Non-commercial use only - see $FSLDIR/LICENSE
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+ERROR: Missing file /home/tom29/rds/hpc-work/cbbu_BIDS/sub-31/func/sub-31_task-facehouse_acq-1_dir-PA_bold.nii.gz

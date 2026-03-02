@@ -1,0 +1,4 @@
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+---- Processing run 1 for sub-03 ----
+ERROR: Missing file /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-03/func//sub-03_task-facehouse_acq-1_dir-PA_recording-cardiac_physio.tsv.gz
