@@ -132,11 +132,11 @@ run2_missed_onsets    = run2_trials.timings_stim_onset(run2_missed);
 run2_missed_durations = run2_trials.timings_stim_duration(run2_missed);
 
 
-
-
 % remove missed from parametric modulators (if present)
 if ~isempty(run1_modulators)
-    pm_1 = importdata(run1_modulators); % load .mat
+    pm_1 = load(run1_modulators); % load .mat
+    pm_1 = pm_1.pm; 
+
     for iPM = 1:numel(pm_1)
         % pm_1(iPM).faces_data(missed_f_run1) = [];
         % pm_1(iPM).houses_data(missed_h_run1) = [];
@@ -149,7 +149,9 @@ if ~isempty(run1_modulators)
     end
 end
 if ~isempty(run2_modulators)
-    pm_2 = importdata(run2_modulators); % load .mat
+    pm_2 = load(run2_modulators); % load .mat
+    pm_2 = pm_2.pm; 
+
     for iPM = 1:numel(pm_2)
         % pm_2(iPM).faces_data(missed_f_run2) = [];
         % pm_2(iPM).houses_data(missed_h_run2) = [];
