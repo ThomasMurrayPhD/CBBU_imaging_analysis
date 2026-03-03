@@ -12,6 +12,22 @@ if strcmp(MT_on(end-2:end), '.gz')
     MT_on = MT_on(1:end-3); % .nii
 end
 
+% basic checks
+if exist('spm_vol','file') ~= 2
+    error('SPM functions not found on MATLAB path. Add SPM to path before running.');
+end
+if ~exist(MT_on, 'file')
+    error('MT_on file not found: %s', MT_on);
+end
+if ~exist(fullfile(LC_atlas_dir, 'SearchSpace_CentralPons.nii'), 'file')
+    error('Reference atlas SearchSpace_CentralPons.nii not found in %s', LC_atlas_dir);
+end
+
+% handle .gz more robustly
+if endsWith(MT_on, '.gz')
+    gunzip(MT_on);
+    MT_on = MT_on(1:end-3); % remove '.gz'
+end
 
 % Load ref vol
 ref_im = spm_read_vols(spm_vol( ...
