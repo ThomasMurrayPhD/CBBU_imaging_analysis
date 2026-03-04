@@ -8,6 +8,8 @@
 #SBATCH -o run_LC_CNR_logs/LC_CNR.out
 
 
+set -euo pipefail
+
 
 BIDS_root="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS"
 LC_atlas_dir="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/"
@@ -35,27 +37,25 @@ for sub in $(seq -w 01 44); do
 
     echo "Processing ${sub_id}"
 
-    matlab -batch "
-        try
-            [CNR_LC0_bi, CNR_LC0_L, CNR_LC0_R, ...
-             CNR_LC5_bi, CNR_LC5_L, CNR_LC5_R, ...
-             CNR_LC25_bi, CNR_LC25_L, CNR_LC25_R] = ...
-             LC_integrity('$MT_on','$LC_atlas_dir');
+    matlab -batch "try; \
+        [ CNR_LC0_bi,CNR_LC0_L,CNR_LC0_R, \
+        CNR_LC5_bi,CNR_LC5_L,CNR_LC5_R, \
+        CNR_LC25_bi,CNR_LC25_L,CNR_LC25_R ] = ...
+        LC_integrity('$MT_on','$LC_atlas_dir'); \
+        fid = fopen('$output_csv','a'); \
+        fprintf(fid,'%s,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f\n', \
+            '$sub_id', ...
+            CNR_LC0_bi,CNR_LC0_L,CNR_LC0_R, ...
+            CNR_LC5_bi,CNR_LC5_L,CNR_LC5_R, ...
+            CNR_LC25_bi,CNR_LC25_L,CNR_LC25_R); \
+        fclose(fid); \
+        catch ME; disp(getReport(ME)); exit(1); end; exit;"
 
-            fid = fopen('$output_csv','a');
-            fprintf(fid,'%s,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f\n', ...
-                '$sub_id', ...
-                CNR_LC0_bi, CNR_LC0_L, CNR_LC0_R, ...
-                CNR_LC5_bi, CNR_LC5_L, CNR_LC5_R, ...
-                CNR_LC25_bi, CNR_LC25_L, CNR_LC25_R);
-            fclose(fid);
+    echo "\tLC0_bi: ${CNR_LC0_bi},\tLC0_L: ${CNR_LC0_L},\tLC0_R: ${CNR_LC0_R}"
+    echo "\tLC5_bi: ${CNR_LC5_bi},\tLC5_L: ${CNR_LC5_L},\tLC5_R: ${CNR_LC5_R}"
+    echo "\tLC25_bi: ${CNR_LC25_bi},\tLC25_L: ${CNR_LC25_L},\tLC25_R: ${CNR_LC25_R}"
 
-        catch ME
-            disp(getReport(ME));
-            exit(1);
-        end
-        exit;
-    "
+    echo "Finished ${sub_id}"
 
 done
 
