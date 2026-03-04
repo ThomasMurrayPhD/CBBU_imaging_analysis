@@ -38,8 +38,8 @@ if [ -z "$run2_trials_fname" ]; then
     exit 1
 fi
 
-run1_modulators="[]"
-run2_modulators="[]"
+#run1_modulators="[]"
+#run2_modulators="[]"
 output_batch_fname="${BIDS_root}/${sub_id}/GLM/first_level_batch.mat"
 spm_output_dir="${BIDS_root}/${sub_id}/GLM/"
 runjob="true"
@@ -73,8 +73,8 @@ matlab -batch "addpath('/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_ana
                '${run2_trials_fname}', \
                '${run1_multiple_regressors_fname}', \
                '${run2_multiple_regressors_fname}', \
-               '${run1_modulators}', \
-               '${run2_modulators}', \
+               [], \
+               [], \
                '${output_batch_fname}', \
                '${spm_output_dir}', \
                '${runjob}'); catch ME; rethrow(ME); end; quit"
