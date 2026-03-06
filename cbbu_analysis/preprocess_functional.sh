@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/
+#SBATCH -D /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/
 #SBATCH -A LAWSON-SL3-CPU
 #SBATCH -c 4
 #SBATCH -a 1-44
