@@ -52,8 +52,8 @@ template_to_05mm_MNI_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analys
 template_to_05mm_MNI_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-05mmMNI1Warp.nii.gz"
 
 # Specify template-to-MNI transformation (1mm)
-template_to_1mm_MNI_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-1mmMNI0GenericAffine.mat"
-template_to_1mm_MNI_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-1mmMNI1Warp.nii.gz"
+template_to_1mm_MNI_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-1mmMNI0GenericAffine.mat"
+template_to_1mm_MNI_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-1mmMNI1Warp.nii.gz"
 
 # Concatenate and apply MP2RAGE-to-template and template-to-MNI transformations (0.5mm)
 # antsApplyTransforms \
