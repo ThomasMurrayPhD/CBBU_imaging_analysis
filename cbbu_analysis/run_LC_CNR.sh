@@ -38,13 +38,13 @@ for sub in $(seq -w 01 44); do
     echo "Processing ${sub_id}"
 
     matlab -batch "try; \
-        [ CNR_LC0_bi,CNR_LC0_L,CNR_LC0_R, CNR_LC5_bi,CNR_LC5_L,CNR_LC5_R, CNR_LC25_bi,CNR_LC25_L,CNR_LC25_R ] = ... \
+        [ CNR_LC0_bi,CNR_LC0_L,CNR_LC0_R, CNR_LC5_bi,CNR_LC5_L,CNR_LC5_R, CNR_LC25_bi,CNR_LC25_L,CNR_LC25_R ] = \
         LC_integrity('$MT_on','$LC_atlas_dir'); \
         fid = fopen('$output_csv','a'); \
         fprintf(fid,'%s,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f\n', \
-            '$sub_id', ... \
-            CNR_LC0_bi,CNR_LC0_L,CNR_LC0_R, ... \
-            CNR_LC5_bi,CNR_LC5_L,CNR_LC5_R, ... \
+            '$sub_id', \
+            CNR_LC0_bi,CNR_LC0_L,CNR_LC0_R, \
+            CNR_LC5_bi,CNR_LC5_L,CNR_LC5_R, \
             CNR_LC25_bi,CNR_LC25_L,CNR_LC25_R); \
         fclose(fid); \
         catch ME; disp(getReport(ME)); exit(1); end; exit;"
