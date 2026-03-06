@@ -66,16 +66,18 @@ mkdir -p "${spm_output_dir}"
 
 # specify and fit model
 matlab -batch "addpath('/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis'); \
-               try, specify_first_level_2runs( \
-               '${run1_scans}', \
-               '${run2_scans}', \
-               '${run1_trials_fname}', \
-               '${run2_trials_fname}', \
-               '${run1_multiple_regressors_fname}', \
-               '${run2_multiple_regressors_fname}', \
-               [], \
-               [], \
-               '${output_batch_fname}', \
-               '${spm_output_dir}', \
-               '${runjob}'); catch ME; rethrow(ME); end; quit"
+            spm('defaults','fmri'); \
+            spm_jobman('initcfg'); \
+            try, specify_first_level_2runs( \
+            '${run1_scans}', \
+            '${run2_scans}', \
+            '${run1_trials_fname}', \
+            '${run2_trials_fname}', \
+            '${run1_multiple_regressors_fname}', \
+            '${run2_multiple_regressors_fname}', \
+            [], \
+            [], \
+            '${output_batch_fname}', \
+            '${spm_output_dir}', \
+            '${runjob}'); catch ME; rethrow(ME); end; quit"
 
