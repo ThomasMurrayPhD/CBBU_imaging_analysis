@@ -42,7 +42,7 @@ echo "Starting ANTS Registration..."
 #     --float 1 \
 #     --random-seed 1234 \
 #     --collapse-output-transforms 1 \
-#     --output [ "/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-MNI","/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-MNI.nii.gz" ]\
+#     --output [ "/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-MNI","/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-MNI.nii.gz" ]\
 #     --interpolation Linear \
 #     --winsorize-image-intensities [ 0.005,0.995 ] \
 #     --use-histogram-matching 0  \
@@ -72,7 +72,7 @@ antsRegistration \
     --float 1 \
     --random-seed 1234 \
     --collapse-output-transforms 1 \
-    --output [ "/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-1mmMNI","/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-1mmMNI.nii.gz" ]\
+    --output [ "/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-1mmMNI","/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-1mmMNI.nii.gz" ]\
     --interpolation Linear \
     --winsorize-image-intensities [ 0.005,0.995 ] \
     --use-histogram-matching 0  \
