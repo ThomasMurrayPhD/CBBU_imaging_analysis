@@ -32,11 +32,14 @@ end
 % Load ref vol
 ref_im = spm_read_vols(spm_vol( ...
     fullfile(LC_atlas_dir, 'SearchSpace_CentralPons.nii') ));
+fprintf('\nReference volume loaded from %s\n', fullfile(LC_atlas_dir, 'SearchSpace_CentralPons.nii'));
 
 % Load MT on
 MT_on_im = spm_read_vols(spm_vol(MT_on));
+fprintf('\nMT_on volume loaded from %s\n', MT_on);
 
 % calculate CNR (whole brain)
+fprintf('\nCalculating CNR across whole brain using reference region in %s\n', fullfile(LC_atlas_dir, 'SearchSpace_CentralPons.nii'));
 mean_ref = mean(MT_on_im(logical(ref_im)));
 sd_ref = std(MT_on_im(logical(ref_im)));
 CNR = (MT_on_im - mean_ref)/sd_ref; % whole brain map
