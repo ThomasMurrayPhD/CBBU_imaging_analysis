@@ -22,7 +22,7 @@ if [ ! -d "template_normalise_logs" ]; then
 fi
 
 module load fsl/6.0.7
-
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=$SLURM_CPUS_PER_TASK
 
 
 # Specify template name
@@ -86,7 +86,7 @@ antsRegistration \
     --metric MI[ "$MNI_1mm_fname","$template_fname",1,32,Regular,0.25 ] \
     --convergence [ 1000x500x250x100,1e-6,10 ] \
     --shrink-factors 8x4x2x1 \
-    --smoothing-sigmas 3x2x1x0vox
+    --smoothing-sigmas 3x2x1x0vox \
     --transform SyN[0.1,1] \
     --metric CC[ "$MNI_1mm_fname","$template_fname",1,2 ] \
     --convergence [ 100x70x50x20,1e-6,10 ] \
