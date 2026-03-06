@@ -40,7 +40,7 @@ module load spm/spm12
 BIDS_root=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS
 
 # Specify centre_images script directory
-centre_dir=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/centre_images
+centre_dir=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/centre_images
 
 # Get subject ID for this job (e.g. "sub-01")
 sub_id=$(printf "sub-%02d" $SLURM_ARRAY_TASK_ID)
@@ -54,10 +54,10 @@ SBref_fname="${BIDS_root}/${sub_id}/func/${sub_id}_task-facehouse_acq-1_dir-PA_s
 
 # Transformations
 idx=$(( SLURM_ARRAY_TASK_ID-1 )) # deals with the weird index at the end of the transformation files (i.e. sub-01 -> 0, sub-02 -> 1, sub-44 -> 43)
-MP2RAGE_to_template_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/ANTs_iteration_5/T1TMP_${sub_id}_acq-whole_UNI_MP2RAGE_brain_N4_centred${idx}0GenericAffine.mat"
-MP2RAGE_to_template_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/ANTs_iteration_5/T1TMP_${sub_id}_acq-whole_UNI_MP2RAGE_brain_N4_centred${idx}1Warp.nii.gz"
-template_to_1mm_MNI_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-1mmMNI0GenericAffine.mat"
-template_to_1mm_MNI_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/study_template/CBBU_template_5iter-to-1mmMNI1Warp.nii.gz"
+MP2RAGE_to_template_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/ANTs_iteration_5/T1TMP_${sub_id}_acq-whole_UNI_MP2RAGE_brain_N4_centred${idx}0GenericAffine.mat"
+MP2RAGE_to_template_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/ANTs_iteration_5/T1TMP_${sub_id}_acq-whole_UNI_MP2RAGE_brain_N4_centred${idx}1Warp.nii.gz"
+template_to_1mm_MNI_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-1mmMNI0GenericAffine.mat"
+template_to_1mm_MNI_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-1mmMNI1Warp.nii.gz"
 centre_transform_mat="${BIDS_root}/${sub_id}/anat/${sub_id}_affine-transform-to-centre.mat"
 
 # Check for missing files before running anything
@@ -104,8 +104,8 @@ done
 
 # # use topup to estimate distortion
 # topup --imain="${PA_AP_fname}.nii.gz" \
-#     --datain="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/topup_acquisition_params.txt" \
-#     --config="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/topup_b0_sk.cnf" \
+#     --datain="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/topup_acquisition_params.txt" \
+#     --config="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/topup_b0_sk.cnf" \
 #     --out="${BIDS_root}/${sub_id}/func/${sub_id}_topup_facehouse_results" \
 #     --iout="${PA_AP_fname}_unwarped.nii.gz" \
 #     --fout="${BIDS_root}/${sub_id}/func/${sub_id}_topup_facehouse_field_Hz.nii.gz" \
@@ -115,19 +115,19 @@ done
 # # use topup to apply correction (to both runs and SBref)
 # applytopup --imain="${run1_fname}_centred.nii.gz" \
 #     --topup="${BIDS_root}/${sub_id}/func/${sub_id}_topup_facehouse_results" \
-#     --datain="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/topup_acquisition_params.txt" \
+#     --datain="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/topup_acquisition_params.txt" \
 #     --inindex=1 \
 #     --out="${run1_fname}_centred_unwarped.nii.gz" \
 #     --method=jac
 # applytopup --imain="${run2_fname}_centred.nii.gz" \
 #     --topup="${BIDS_root}/${sub_id}/func/${sub_id}_topup_facehouse_results" \
-#     --datain="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/topup_acquisition_params.txt" \
+#     --datain="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/topup_acquisition_params.txt" \
 #     --inindex=1 \
 #     --out="${run2_fname}_centred_unwarped.nii.gz" \
 #     --method=jac
 # applytopup --imain="${SBref_fname}_centred.nii.gz" \
 #     --topup="${BIDS_root}/${sub_id}/func/${sub_id}_topup_facehouse_results" \
-#     --datain="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/topup_acquisition_params.txt" \
+#     --datain="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/topup_acquisition_params.txt" \
 #     --inindex=1 \
 #     --out="${SBref_fname}_centred_unwarped.nii.gz" \
 #     --method=jac
@@ -225,5 +225,5 @@ antsApplyTransforms \
 #------------------------------------------------------------------------------------------------#
 # Smooth images
 echo "----------SMOOTHING----------"
-matlab -batch "try, smooth_images('${run1_fname}_centred_unwarped_realigned_normalised.nii.gz', '${run1_fname}_centred_unwarped_realigned_normalised_smoothed.nii.gz', [6,6,6]); catch ME; rethrow(ME); end ; quit" 
-matlab -batch "try, smooth_images('${run2_fname}_centred_unwarped_realigned_normalised.nii.gz', '${run2_fname}_centred_unwarped_realigned_normalised_smoothed.nii.gz', [6,6,6]); catch ME; rethrow(ME); end ; quit" 
+matlab -batch "try, smooth_images('${run1_fname}_centred_unwarped_realigned_normalised.nii.gz', '${run1_fname}_centred_unwarped_realigned_normalised_smoothed.nii.gz', [3,3,3]); catch ME; rethrow(ME); end ; quit" 
+matlab -batch "try, smooth_images('${run2_fname}_centred_unwarped_realigned_normalised.nii.gz', '${run2_fname}_centred_unwarped_realigned_normalised_smoothed.nii.gz', [3,3,3]); catch ME; rethrow(ME); end ; quit" 
