@@ -49,10 +49,6 @@ for sub in $(seq -w 01 44); do
         fclose(fid); \
         catch ME; disp(getReport(ME)); exit(1); end; exit;"
 
-    echo "\tLC0_bi: ${CNR_LC0_bi},\tLC0_L: ${CNR_LC0_L},\tLC0_R: ${CNR_LC0_R}"
-    echo "\tLC5_bi: ${CNR_LC5_bi},\tLC5_L: ${CNR_LC5_L},\tLC5_R: ${CNR_LC5_R}"
-    echo "\tLC25_bi: ${CNR_LC25_bi},\tLC25_L: ${CNR_LC25_L},\tLC25_R: ${CNR_LC25_R}"
-
     echo "Finished ${sub_id}"
 
 done
