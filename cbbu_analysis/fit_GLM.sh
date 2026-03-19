@@ -23,8 +23,8 @@ sub_id=$(printf "sub-%02d" $SLURM_ARRAY_TASK_ID)
 
 
 # Specfiy file names
-run1_scans="${BIDS_root}/${sub_id}/func/${sub_id}_task-facehouse_acq-1_dir-PA_bold_centred_unwarped_realigned_normalised_smoothed.nii.gz"
-run2_scans="${BIDS_root}/${sub_id}/func/${sub_id}_task-facehouse_acq-2_dir-PA_bold_centred_unwarped_realigned_normalised_smoothed.nii.gz"
+run1_scans="${BIDS_root}/${sub_id}/func/${sub_id}_task-facehouse_acq-1_dir-PA_bold_centred_unwarped_realigned_smoothed.nii.gz"
+run2_scans="${BIDS_root}/${sub_id}/func/${sub_id}_task-facehouse_acq-2_dir-PA_bold_centred_unwarped_realigned_smoothed.nii.gz"
 run1_trials_fname=$(ls ${BIDS_root}/${sub_id}/beh/${sub_id}_facehouse-MRI_run1_*.mat 2>/dev/null | head -n 1)
 run2_trials_fname=$(ls ${BIDS_root}/${sub_id}/beh/${sub_id}_facehouse-MRI_run2_*.mat 2>/dev/null | head -n 1)
 
@@ -40,8 +40,9 @@ fi
 
 #run1_modulators="[]"
 #run2_modulators="[]"
-output_batch_fname="${BIDS_root}/${sub_id}/GLM/first_level_batch.mat"
-spm_output_dir="${BIDS_root}/${sub_id}/GLM/"
+
+output_batch_fname="${BIDS_root}/${sub_id}/GLM/No_parametric_modulators/first_level_batch.mat"
+spm_output_dir="${BIDS_root}/${sub_id}/GLM/No_parametric_modulators/"
 runjob="true"
 
 
