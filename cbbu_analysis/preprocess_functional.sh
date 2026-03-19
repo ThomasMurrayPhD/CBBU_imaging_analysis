@@ -4,7 +4,7 @@
 #SBATCH -c 4
 #SBATCH -a 1-44
 #SBATCH -p cclake
-#SBATCH -t 4:00:00
+#SBATCH -t 2:00:00
 #SBATCH --mem 32G
 #SBATCH -o preprocess_functional_logs/preprocess_functional_%A_%a.out
 
@@ -179,51 +179,51 @@ done
 
 
 
-#------------------------------------------------------------------------------------------------#
-# Normalise to MNI
-echo "----------REGISTERING EPI TO MNI----------"
+# #------------------------------------------------------------------------------------------------#
+# # Normalise to MNI
+# echo "----------REGISTERING EPI TO MNI----------"
 
-# Check missing files
-for f in \
-  "${run1_fname}_centred_unwarped_realigned.nii.gz" \
-  "${run2_fname}_centred_unwarped_realigned.nii.gz"; do
-    fslnvols "$f" >/dev/null || { echo "ERROR: bad or corrupt file $f"; exit 1; }
-done
+# # Check missing files
+# for f in \
+#   "${run1_fname}_centred_unwarped_realigned.nii.gz" \
+#   "${run2_fname}_centred_unwarped_realigned.nii.gz"; do
+#     fslnvols "$f" >/dev/null || { echo "ERROR: bad or corrupt file $f"; exit 1; }
+# done
 
-# Apply all transformations in single step.
-# Run 1
-antsApplyTransforms \
-    -d 3 \
-    -e 3 \
-    --float \
-    -i "${run1_fname}_centred_unwarped_realigned.nii.gz" \
-    -r "${FSLDIR}/data/standard/MNI152_T1_1mm_brain.nii.gz" \
-    -t "${template_to_1mm_MNI_SyN}" \
-    -t "${template_to_1mm_MNI_affine}" \
-    -t "${MP2RAGE_to_template_SyN}" \
-    -t "${MP2RAGE_to_template_affine}" \
-    -t "${BIDS_root}/${sub_id}/func/${sub_id}_func_to_anatomical_ANTS.mat" \
-    -o "${run1_fname}_centred_unwarped_realigned_normalised.nii.gz" \
-    -n Linear
+# # Apply all transformations in single step.
+# # Run 1
+# antsApplyTransforms \
+#     -d 3 \
+#     -e 3 \
+#     --float \
+#     -i "${run1_fname}_centred_unwarped_realigned.nii.gz" \
+#     -r "${FSLDIR}/data/standard/MNI152_T1_1mm_brain.nii.gz" \
+#     -t "${template_to_1mm_MNI_SyN}" \
+#     -t "${template_to_1mm_MNI_affine}" \
+#     -t "${MP2RAGE_to_template_SyN}" \
+#     -t "${MP2RAGE_to_template_affine}" \
+#     -t "${BIDS_root}/${sub_id}/func/${sub_id}_func_to_anatomical_ANTS.mat" \
+#     -o "${run1_fname}_centred_unwarped_realigned_normalised.nii.gz" \
+#     -n Linear
 
-# Run 2
-antsApplyTransforms \
-    -d 3 \
-    -e 3 \
-    --float \
-    -i "${run2_fname}_centred_unwarped_realigned.nii.gz" \
-    -r "${FSLDIR}/data/standard/MNI152_T1_1mm_brain.nii.gz" \
-    -t "${template_to_1mm_MNI_SyN}" \
-    -t "${template_to_1mm_MNI_affine}" \
-    -t "${MP2RAGE_to_template_SyN}" \
-    -t "${MP2RAGE_to_template_affine}" \
-    -t "${BIDS_root}/${sub_id}/func/${sub_id}_func_to_anatomical_ANTS.mat" \
-    -o "${run2_fname}_centred_unwarped_realigned_normalised.nii.gz" \
-    -n Linear
+# # Run 2
+# antsApplyTransforms \
+#     -d 3 \
+#     -e 3 \
+#     --float \
+#     -i "${run2_fname}_centred_unwarped_realigned.nii.gz" \
+#     -r "${FSLDIR}/data/standard/MNI152_T1_1mm_brain.nii.gz" \
+#     -t "${template_to_1mm_MNI_SyN}" \
+#     -t "${template_to_1mm_MNI_affine}" \
+#     -t "${MP2RAGE_to_template_SyN}" \
+#     -t "${MP2RAGE_to_template_affine}" \
+#     -t "${BIDS_root}/${sub_id}/func/${sub_id}_func_to_anatomical_ANTS.mat" \
+#     -o "${run2_fname}_centred_unwarped_realigned_normalised.nii.gz" \
+#     -n Linear
     
 
 #------------------------------------------------------------------------------------------------#
 # Smooth images
 echo "----------SMOOTHING----------"
-matlab -batch "try, smooth_images('${run1_fname}_centred_unwarped_realigned_normalised.nii.gz', '${run1_fname}_centred_unwarped_realigned_normalised_smoothed.nii.gz', [3,3,3]); catch ME; rethrow(ME); end ; quit" 
-matlab -batch "try, smooth_images('${run2_fname}_centred_unwarped_realigned_normalised.nii.gz', '${run2_fname}_centred_unwarped_realigned_normalised_smoothed.nii.gz', [3,3,3]); catch ME; rethrow(ME); end ; quit" 
+matlab -batch "try, smooth_images('${run1_fname}_centred_unwarped_realigned.nii.gz', '${run1_fname}_centred_unwarped_realigned_smoothed.nii.gz', [3,3,3]); catch ME; rethrow(ME); end ; quit" 
+matlab -batch "try, smooth_images('${run2_fname}_centred_unwarped_realigned.nii.gz', '${run2_fname}_centred_unwarped_realigned_smoothed.nii.gz', [3,3,3]); catch ME; rethrow(ME); end ; quit" 
