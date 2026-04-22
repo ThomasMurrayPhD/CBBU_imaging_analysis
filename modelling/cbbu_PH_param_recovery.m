@@ -38,6 +38,10 @@ for i = 1:N
     try
         % simulate data with sampleModel
         sim = tapas_sampleModel(u, prc_config, obs_config);
+
+        if any(isnan(sim.y))
+            x=1;
+        end
         
         % store simulated params
         recov.al_0.sim(i) = sim.p_prc.al_0;
@@ -56,6 +60,10 @@ for i = 1:N
         recov.al_0.est(i) = est.p_prc.al_0;
         recov.S.est(i) = est.p_prc.S;
         recov.ze.est(i) = est.p_obs.ze;
+
+        if ~isreal(est.optim.LME)
+            x=1;
+        end
 
         % store fit metrics
         if ~isinf(est.optim.LME)
