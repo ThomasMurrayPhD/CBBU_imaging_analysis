@@ -2,266 +2,398 @@ Loading spm/spm12
   Loading requirement: matlab/r2019a
 Processing sub-01
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-01/anat/sub-01_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-01
 Processing sub-02
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-02/anat/sub-02_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-02
 Processing sub-03
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-03/anat/sub-03_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-03
 Processing sub-04
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-04/anat/sub-04_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-04
 Processing sub-05
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-05/anat/sub-05_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-05
 Processing sub-06
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-06/anat/sub-06_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-06
 Processing sub-07
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-07/anat/sub-07_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-07
 Processing sub-08
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-08/anat/sub-08_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-08
 Processing sub-09
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-09/anat/sub-09_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-09
 Processing sub-10
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-10/anat/sub-10_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-10
 Processing sub-11
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-11/anat/sub-11_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-11
 Processing sub-12
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-12/anat/sub-12_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-12
 Processing sub-13
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-13/anat/sub-13_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-13
 Processing sub-14
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-14/anat/sub-14_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-14
 Processing sub-15
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-15/anat/sub-15_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-15
 Processing sub-16
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-16/anat/sub-16_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-16
 Processing sub-17
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-17/anat/sub-17_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-17
 Processing sub-18
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-18/anat/sub-18_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-18
 Processing sub-19
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-19/anat/sub-19_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-19
 Processing sub-20
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-20/anat/sub-20_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-20
 Processing sub-21
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-21/anat/sub-21_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-21
 Processing sub-22
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-22/anat/sub-22_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-22
 Processing sub-23
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-23/anat/sub-23_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-23
 Processing sub-24
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-24/anat/sub-24_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-24
 Processing sub-25
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-25/anat/sub-25_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-25
 Processing sub-26
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-26/anat/sub-26_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-26
 Processing sub-27
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-27/anat/sub-27_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-27
 Processing sub-28
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-28/anat/sub-28_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-28
 Processing sub-29
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-29/anat/sub-29_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-29
 Processing sub-30
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-30/anat/sub-30_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-30
 Processing sub-31
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-31/anat/sub-31_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-31
 Processing sub-32
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-32/anat/sub-32_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-32
 Processing sub-33
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-33/anat/sub-33_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-33
 Processing sub-34
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-34/anat/sub-34_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-34
 Processing sub-35
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-35/anat/sub-35_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-35
 Processing sub-36
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-36/anat/sub-36_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-36
 Processing sub-37
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-37/anat/sub-37_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-37
 Processing sub-38
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-38/anat/sub-38_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-38
 Processing sub-39
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-39/anat/sub-39_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-39
 Processing sub-40
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-40/anat/sub-40_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-40
 Processing sub-41
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-41/anat/sub-41_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-41
 Processing sub-42
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-42/anat/sub-42_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-42
 Processing sub-43
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-43/anat/sub-43_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-43
 Processing sub-44
 MATLAB is selecting SOFTWARE OPENGL rendering.
-  try
- |
-{Error: This statement is incomplete.
-} 
+
+Reference volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+
+MT_on volume loaded from /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-44/anat/sub-44_acq-LC_mt-on_MTS_N4_centred_normalised.nii
+
+Calculating CNR across whole brain using reference region in /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/LC_7T_prob/SearchSpace_CentralPons.nii
+Finished sub-44
 All done.
