@@ -50,10 +50,7 @@ function specify_first_level_2runs( ...
 % spm_output_dir='C:\Users\Tom\Desktop\sub-20\SPM';
 % runjob=false;
 
-%%
-
-
-
+%% Sort files out
 
 % if compressed .nii input (run 1)
 if strcmp(run1_scans(end-2:end), '.gz')
@@ -81,18 +78,16 @@ if strcmp(run2_multiple_regressors_fname(end-3:end), '.par')
     run2_multiple_regressors_fname = [run2_multiple_regressors_fname(1:end-4), '.txt'];
 end
 
+%% Get onsets etc
 % read trial info
 run1_trials = load(run1_trials_fname);
 run1_trials = run1_trials.trials;
 run2_trials = load(run2_trials_fname);
 run2_trials = run2_trials.trials;
 
-
 % Missed predictions onsets
 run1_missed = isnan(run1_trials.prediction_RT);
 run2_missed = isnan(run2_trials.prediction_RT);
-
-
 
 % Logical indices (run 1)
 f_idx_run1 = run1_trials.outcome == 1;
@@ -112,7 +107,6 @@ h_durations_run1 = run1_trials.timings_stim_duration(valid_h_run1);
 run1_missed_onsets    = run1_trials.timings_stim_onset(run1_missed);
 run1_missed_durations = run1_trials.timings_stim_duration(run1_missed);
 
-
 % Logical indices (run 2)
 f_idx_run2 = run2_trials.outcome == 1;
 h_idx_run2 = run2_trials.outcome == 2;
@@ -131,7 +125,7 @@ h_durations_run2 = run2_trials.timings_stim_duration(valid_h_run2);
 run2_missed_onsets    = run2_trials.timings_stim_onset(run2_missed);
 run2_missed_durations = run2_trials.timings_stim_duration(run2_missed);
 
-
+%% Get Parametric Modulators
 % remove missed from parametric modulators (if present)
 if ~isempty(run1_modulators)
     pm_1 = load(run1_modulators); % load .mat
@@ -164,8 +158,7 @@ if ~isempty(run2_modulators)
     end
 end
 
-
-
+%% Scan lists
 % List of scans in run 1
 run1_nVols = size(importdata(run1_multiple_regressors_fname), 1);
 scan_list_run1 = cell(run1_nVols,1);
@@ -180,7 +173,7 @@ for i = 1:run2_nVols
     scan_list_run2{i} = sprintf('%s,%d', run2_scans, i);
 end
 
-%% SPM batch
+%% First level spec
 % output directory / timing
 matlabbatch{1}.spm.stats.fmri_spec.dir = {spm_output_dir};
 matlabbatch{1}.spm.stats.fmri_spec.timing.units = 'secs';
@@ -247,7 +240,6 @@ matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).onset = f_onsets_run2;
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).duration = f_durations_run2;
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).tmod = 0;
 
-
 % run 2/houses
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).name = 'houses';
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).onset = h_onsets_run2;
@@ -298,7 +290,7 @@ matlabbatch{1}.spm.stats.fmri_spec.mask = {''};
 matlabbatch{1}.spm.stats.fmri_spec.cvi = 'AR(1)';
 
 
-% Estimation 
+%% Estimation 
 matlabbatch{2}.spm.stats.fmri_est.spmmat(1) = ...
     cfg_dep('fMRI model specification: SPM.mat File', ... 
     substruct('.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), ... 
@@ -308,6 +300,8 @@ matlabbatch{2}.spm.stats.fmri_est.write_residuals = 0;
 matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;
 
 
+
+%% Save and run
 % save batch
 save(output_batch_fname, 'matlabbatch');
 

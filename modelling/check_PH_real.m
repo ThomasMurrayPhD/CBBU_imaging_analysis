@@ -17,6 +17,7 @@ real_idx = logical(real_idx);
 figure; hold on;
 scatter(tapas_logit(recov.al_0.sim(real_idx), 1), log(recov.S.sim(real_idx)));
 scatter(tapas_logit(recov.al_0.sim(~real_idx), 1), log(recov.S.sim(~real_idx)));
-
+xlabel('logit(al 0)');
+ylabel('log(S)');
 
 

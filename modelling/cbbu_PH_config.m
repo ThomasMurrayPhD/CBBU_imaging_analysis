@@ -1,5 +1,13 @@
 function [prc_config, obs_config] = cbbu_PH_config
 
+% http://www.scholarpedia.org/article/Pearce-Hall_error_learning_theory
+% Wise, T., Michely, J., Dayan, P., & Dolan, R. J. (2019). A computational
+% account of threat-related attentional bias. PLoS computational biology,
+% 15(10), e1007341. 
+% Barnby, J. M., Mehta, M. A., & Moutoussis, M. (2022).
+% The computational relationship between reinforcement learning, social
+% inference, and paranoia. PLoS computational biology, 18(7), e1010326.
+
 % Perceptual model
 prc_config = tapas_ph_binary_config;
 
