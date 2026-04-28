@@ -33,3 +33,4 @@ echo "Output batch file: ${output_batch_fname}"
 
 # Run matlab function to specify and run contrasts
 matlab -nodisplay -r "addpath('/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis'); specify_first_level_contrasts('${glm_root}', '${output_batch_fname}'); exit;"
+
