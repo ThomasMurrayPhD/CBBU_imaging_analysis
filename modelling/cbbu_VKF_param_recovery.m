@@ -17,7 +17,7 @@
 % 
 %   Fix w0 to 0.2802 (recov3)
 %       lambda: r = .491
-%       v0:     r = .264
+%       v0:     r = .264 (flatline)
 %       omega:  r = .983
 %       ze:     r = .743
 % 
@@ -27,6 +27,10 @@
 %       ze:     r = .873
 % 
 %   Ok so what if we fix v0 but set small prior on w0 (sa=1) (recov5)
+%       lambda: r = .643
+%       omega:  r = .992
+%       w0:     r = .172 (flatline) 
+%       ze:     r = .830
 
 
 addpath('VKF');

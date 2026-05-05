@@ -13,7 +13,7 @@ prc_config.logomegamu = log(0.1405); % from bopars
 prc_config.logomegasa = 4;
 
 prc_config.logw0mu = log(0.2802); % from bopars
-prc_config.logw0sa = 1;
+prc_config.logw0sa = 0;
 
 prc_config = tapas_align_priors(prc_config);
 

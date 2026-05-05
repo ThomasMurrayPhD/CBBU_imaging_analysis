@@ -7,7 +7,7 @@ function specify_first_level_contrasts(GLM_root, output_batch_fname)
 
 
 % get SPM.mat
-spmmat = [GLM_root, '\SPM.mat'];
+spmmat = [GLM_root, '/SPM.mat'];
 SPM = load(spmmat);
 SPM = SPM.SPM;
 
