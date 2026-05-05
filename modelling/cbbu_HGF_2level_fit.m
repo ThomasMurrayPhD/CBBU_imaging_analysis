@@ -44,7 +44,7 @@ for i = 1:44
                     optim_config);
             success = true;
         catch
-            fprintf('\nFit failed on attempt ')
+            fprintf('\nFit failed on attempt %i', attempt)
             attempt = attempt + 1;
             if attempt == max_attempts
                 model_fits{i} = NaN;

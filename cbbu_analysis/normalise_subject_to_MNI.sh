@@ -29,8 +29,10 @@ functional_to_anatomical_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BI
 
 # List of input images to normalise
 input_images=(
-    "${BIDS_root}/${sub_id}/GLM/No_parametric_modulators/beta_001.nii"
-    "${BIDS_root}/${sub_id}/GLM/No_parametric_modulators/beta_002.nii"
+    "${BIDS_root}/${sub_id}/GLM/No_parametric_modulators/con_0001.nii"
+    "${BIDS_root}/${sub_id}/GLM/No_parametric_modulators/con_0002.nii"
+    "${BIDS_root}/${sub_id}/GLM/No_parametric_modulators/con_0003.nii"
+    "${BIDS_root}/${sub_id}/GLM/No_parametric_modulators/con_0004.nii"
 )
 
 

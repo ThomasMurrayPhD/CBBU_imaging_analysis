@@ -1,9 +1,14 @@
 % function to run parameter recovery on Sutton K1 model
 
 
-% zeta parameter recovers reasonably well (r=.591)
-% h1 parameter does not recover
-% vhat_1 parameter MAYBE recovers between -2 and 2,
+% recovery 1:
+%   fix rhat to 1, free vhat1 (incorrect), free h1, free mu, free ze
+% 
+% recovery 2:
+%   fix vhat1 to .5,  fix h1 to .001, free rhat1, free mu, free ze
+% 
+% recovery 3:
+%   fix vhat1, h1, and rhat1, free mu, free ze
 
 
 % get input
@@ -25,12 +30,12 @@ N=200;
 recov.mu.sim = nan(N, 1);
 recov.mu.est = nan(N, 1);
 recov.mu.space = 'log';
-recov.vhat_1.sim = nan(N, 1);
-recov.vhat_1.est = nan(N, 1);
-recov.vhat_1.space = 'logit';
-recov.h_1.sim = nan(N, 1);
-recov.h_1.est = nan(N, 1);
-recov.h_1.space = 'log';
+% recov.vhat_1.sim = nan(N, 1);
+% recov.vhat_1.est = nan(N, 1);
+% recov.vhat_1.space = 'logit';
+% recov.h_1.sim = nan(N, 1);
+% recov.h_1.est = nan(N, 1);
+% recov.h_1.space = 'log';
 recov.ze.sim = nan(N, 1);
 recov.ze.est = nan(N, 1);
 recov.ze.space = 'log';
@@ -51,8 +56,8 @@ for i = 1:N
 
         % store simulated params
         recov.mu.sim(i) = sim.p_prc.mu;
-        recov.vhat_1.sim(i) = sim.p_prc.vhat_1;
-        recov.h_1.sim(i) = sim.p_prc.h_1;
+        % recov.vhat_1.sim(i) = sim.p_prc.vhat_1;
+        % recov.h_1.sim(i) = sim.p_prc.h_1;
         recov.ze.sim(i) = sim.p_obs.ze;
 
         % recover
@@ -65,8 +70,8 @@ for i = 1:N
     
         % store recovered params
         recov.mu.est(i) = est.p_prc.mu;
-        recov.vhat_1.est(i) = est.p_prc.vhat_1;
-        recov.h_1.est(i) = est.p_prc.h_1;
+        % recov.vhat_1.est(i) = est.p_prc.vhat_1;
+        % recov.h_1.est(i) = est.p_prc.h_1;
         recov.ze.est(i) = est.p_obs.ze;
 
         % store fit metrics
@@ -85,7 +90,7 @@ for i = 1:N
 
 end
 
-save('cbbu_SuttonK1_recov.mat', 'recov');
+save('cbbu_SuttonK1_recov3.mat', 'recov');
 recovery_figures(recov);
 
 

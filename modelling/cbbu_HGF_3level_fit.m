@@ -30,13 +30,27 @@ for i = 1:44
     y([run1.prediction_timedout; run2.prediction_timedout]) = NaN; %remove missed
     
     % fit model
-    model_fits{i} = tapas_fitModel(...
-            y,...
-            u,...
-            prc_config,...
-            obs_config,...
-            optim_config);
-
+    success = false;
+    attempt = 1;
+    max_attempts = 5;
+    while ~success && attempt < max_attempts
+        
+        try
+            model_fits{i} = tapas_fitModel(...
+                    y,...
+                    u,...
+                    prc_config,...
+                    obs_config,...
+                    optim_config);
+            success = true;
+        catch
+            fprintf('\nFit failed on attempt %i', attempt)
+            attempt = attempt + 1;
+            if attempt == max_attempts
+                model_fits{i} = NaN;
+            end
+        end
+    end
 end
 
 save('cbbu_HGF_3level_model_fits.mat', 'model_fits');
