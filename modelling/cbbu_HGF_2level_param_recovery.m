@@ -1,5 +1,9 @@
 % function to run parameter recovery on HGF_2level
 
+
+% for recov2 I've set logzesa to 8 (was set to 1 before)
+
+
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
 run2 = importdata('sub-01_facehouse-MRI_run2_15-01-24_11-35-43.mat');
@@ -70,7 +74,7 @@ for i = 1:N
 
 end
 
-save('cbbu_HGF_2level_recov.mat', 'recov');
+save('cbbu_HGF_2level_recov2.mat', 'recov');
 recovery_figures(recov);
 
 

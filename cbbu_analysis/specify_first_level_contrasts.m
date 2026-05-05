@@ -51,9 +51,8 @@ matlabbatch{1}.spm.stats.con.consess{4}.tcon.sessrep = 'none';
 save(output_batch_fname, 'matlabbatch');
 
 % run
-if runjob
-    spm('Defaults','fMRI');
-    spm_jobman('initcfg');
-    spm_jobman('run', matlabbatch);
-end
+spm('Defaults','fMRI');
+spm_jobman('initcfg');
+spm_jobman('run', matlabbatch);
+
 

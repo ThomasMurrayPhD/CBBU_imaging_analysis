@@ -10,6 +10,9 @@ prc_config = tapas_align_priors(prc_config);
 
 % obs model
 obs_config = tapas_unitsq_sgm_config;
+obs_config.logzemu = log(48);
+obs_config.logzesa = 1; %% changed from original
+obs_config = tapas_align_priors(obs_config);
 obs_config.predorpost = 1;
 
 

@@ -17,7 +17,7 @@ model_fits = cell(44,1);
 for i = 1:44
 
     % sub directory
-    sub_dir = ['..\..\DATA\sub-', num2str(i, '%02i'), '\task_fmri\'];
+    sub_dir = ['task_data\sub-', num2str(i, '%02i'), '\'];
 
     % load data
     run1_fname = dir(fullfile(sub_dir, ['sub-', num2str(i, '%02i'), '_facehouse-MRI_run1*.mat'])).name;
@@ -30,13 +30,28 @@ for i = 1:44
     y([run1.prediction_timedout; run2.prediction_timedout]) = NaN; %remove missed
     
     % fit model
-    model_fits{i} = tapas_fitModel(...
-            y,...
-            u,...
-            prc_config,...
-            obs_config,...
-            optim_config);
-
+    success = false;
+    attempt = 1;
+    max_attempts = 5;
+    while ~success && attempt < max_attempts
+        
+        try
+            model_fits{i} = tapas_fitModel(...
+                    y,...
+                    u,...
+                    prc_config,...
+                    obs_config,...
+                    optim_config);
+            success = true;
+        catch
+            fprintf('\nFit failed on attempt ')
+            attempt = attempt + 1;
+            if attempt == max_attempts
+                model_fits{i} = NaN;
+            end
+        end
+    end
+    
 end
 
 save('cbbu_HGF_2level_model_fits.mat', 'model_fits');

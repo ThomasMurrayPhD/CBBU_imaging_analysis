@@ -1,4 +1,5 @@
 function [prc_config, obs_config] = cbbu_VKF_config
+addpath('VKF');
 
 % Perceptual model
 prc_config = prc_vkf_binary_config;
