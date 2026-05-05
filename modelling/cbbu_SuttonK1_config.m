@@ -2,7 +2,7 @@ function [prc_config, obs_config] = cbbu_SuttonK1_config
 
 % Perceptual model
 prc_config = tapas_sutton_k1_binary_config;
-prc_config.logmumu = log(4.4422); % from bopars
+prc_config.logmumu = log(1); % from bopars
 prc_config.logmusa = 8;
 
 prc_config.logRhatmu = log(1);

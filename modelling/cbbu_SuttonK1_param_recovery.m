@@ -9,6 +9,10 @@
 % 
 % recovery 3:
 %   fix vhat1, h1, and rhat1, free mu, free ze
+%   - good, but mu crashes after ~2.7
+% 
+% recovery 3:
+%   fix vhat1, h1, and rhat1, free mu (priormu = 1), free ze
 
 
 % get input
@@ -90,7 +94,7 @@ for i = 1:N
 
 end
 
-save('cbbu_SuttonK1_recov3.mat', 'recov');
+save('cbbu_SuttonK1_recov4.mat', 'recov');
 recovery_figures(recov);
 
 

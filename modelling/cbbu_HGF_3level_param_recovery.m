@@ -1,5 +1,16 @@
 % function to run parameter recovery on HGF_2level
 
+
+% recov1: (119/200 failed)
+%   free om2, free om3, fix kappa
+% 
+% recov2:
+%   free om3, free ka2, fix om2 (a la Iglesias)
+% 
+% recov3:
+%   fix om3, free om2, free ka2 (why not)
+
+
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
 run2 = importdata('sub-01_facehouse-MRI_run2_15-01-24_11-35-43.mat');
@@ -19,9 +30,12 @@ N=200;
 recov.om2.sim = nan(N, 1);
 recov.om2.est = nan(N, 1);
 recov.om2.space = 'native';
-recov.om3.sim = nan(N, 1);
-recov.om3.est = nan(N, 1);
-recov.om3.space = 'native';
+% recov.om3.sim = nan(N, 1);
+% recov.om3.est = nan(N, 1);
+% recov.om3.space = 'native';
+recov.ka.sim = nan(N, 1);
+recov.ka.est = nan(N, 1);
+recov.ka.space = 'log';
 recov.ze.sim = nan(N, 1);
 recov.ze.est = nan(N, 1);
 recov.ze.space = 'log';
@@ -41,7 +55,8 @@ for i = 1:N
 
         % store simulated params
         recov.om2.sim(i) = sim.p_prc.om(2);
-        recov.om3.sim(i) = sim.p_prc.om(3);
+        % recov.om3.sim(i) = sim.p_prc.om(3);
+        recov.ka.sim(i) = sim.p_prc.ka(2);
         recov.ze.sim(i) = sim.p_obs.ze;
 
         % recover
@@ -54,7 +69,8 @@ for i = 1:N
     
         % store recovered params
         recov.om2.est(i) = est.p_prc.om(2);
-        recov.om3.est(i) = est.p_prc.om(3);
+        % recov.om3.est(i) = est.p_prc.om(3);
+        recov.ka.est(i) = est.p_prc.ka(2);
         recov.ze.est(i) = est.p_obs.ze;
 
         % store fit metrics
@@ -73,7 +89,7 @@ for i = 1:N
 
 end
 
-save('cbbu_HGF_3level_recov.mat', 'recov');
+save('cbbu_HGF_3level_recov3.mat', 'recov');
 recovery_figures(recov);
 
 
