@@ -1,0 +1,38 @@
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+Running contrasts for sub-39
+GLM root directory: /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-39/GLM/No_parametric_modulators
+Output batch file: /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-39/GLM/No_parametric_modulators/first_level_contrasts_batch.mat
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+05-May-2026 22:19:43 - Running job #1
+------------------------------------------------------------------------
+05-May-2026 22:19:43 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             22:19:43 - 05/05/2026
+========================================================================
+Contrasts folder                        : ./GLM/No_parametric_modulators
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	contrast image  2               :                   ...computing       ...written con_0002.nii
+	spm{T} image  2                 :                   ...computing      ...written spmT_0002.nii
+	contrast image  3               :                   ...computing       ...written con_0003.nii
+	spm{T} image  3                 :                   ...computing      ...written spmT_0003.nii
+	contrast image  4               :                   ...computing       ...written con_0004.nii
+	spm{T} image  4                 :                   ...computing      ...written spmT_0004.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          22:19:47 - 05/05/2026
+05-May-2026 22:19:47 - Done    'Contrast Manager'
+05-May-2026 22:19:47 - Done
+

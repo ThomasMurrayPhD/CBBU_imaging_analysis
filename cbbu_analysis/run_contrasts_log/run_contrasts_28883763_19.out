@@ -1,0 +1,42 @@
+Loading spm/spm12
+  Loading requirement: matlab/r2019a
+Running contrasts for sub-19
+GLM root directory: /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-19/GLM/No_parametric_modulators
+Output batch file: /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS/sub-19/GLM/No_parametric_modulators/first_level_contrasts_batch.mat
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+05-May-2026 15:21:35 - Running job #1
+------------------------------------------------------------------------
+05-May-2026 15:21:35 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:21:35 - 05/05/2026
+========================================================================
+Contrasts folder                        : ./GLM/No_parametric_modulators
+1  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  <-  !invalid contrast
+05-May-2026 15:21:36 - Failed  'Contrast Manager'
+Error using spm_run_con (line 251)
+Error in contrast specification
+In file "/usr/local/software/spm/spm12_v7487/config/spm_run_con.m" (v7093), function "spm_run_con" at line 251.
+
+The following modules did not run:
+Failed: Contrast Manager
+
+{Error using MATLABbatch system
+Job execution failed. The full log of this run can be found in MATLAB command
+window, starting with the lines (look for the line showing the exact #job as
+displayed in this error message)
+------------------
+Running job #1
+------------------
+} 
