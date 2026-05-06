@@ -18,6 +18,8 @@ if [ ! -d "normalise_subject_to_MNI_logs" ]; then
     mkdir "normalise_subject_to_MNI_logs"
 fi
 
+# Get subject ID for this job (e.g. "sub-01")
+sub_id=$(printf "sub-%02d" $SLURM_ARRAY_TASK_ID)
 
 # Transformations
 idx=$(( SLURM_ARRAY_TASK_ID-1 )) # deals with the weird index at the end of the transformation files (i.e. sub-01 -> 0, sub-02 -> 1, sub-44 -> 43)
