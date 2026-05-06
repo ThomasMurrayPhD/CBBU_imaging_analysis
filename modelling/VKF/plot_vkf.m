@@ -6,7 +6,7 @@ y = r.y;
 mu1hat = r.traj.mu1hat;
 learning_rate = r.traj.wt;
 volatility = r.traj.volatility;
-
+posterior_variance = r.traj.posterior_variance;
 
 figure;
 
@@ -27,6 +27,12 @@ ylabel('Learning rate')
 % plot mu1hat
 subplot(3,1,3); 
 hold on; 
+
+
+x_w = [1:numel(u), numel(u):-1:1]';
+y_w = [mu1hat + (posterior_variance/2); flipud(mu1hat - (posterior_variance/2))];
+patch(x_w, y_w, [.8, .8, .8], 'edgecolor', 'none');
+
 plot(1:numel(u), mu1hat, 'linewidth', 2);
 scatter(1:numel(u), u, 8, 'k', 'filled');
 scatter(1:numel(u), r.y*1.1 -.05, 8, 'r', 'filled');

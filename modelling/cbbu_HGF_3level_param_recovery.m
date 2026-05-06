@@ -30,12 +30,12 @@ N=200;
 recov.om2.sim = nan(N, 1);
 recov.om2.est = nan(N, 1);
 recov.om2.space = 'native';
-% recov.om3.sim = nan(N, 1);
-% recov.om3.est = nan(N, 1);
-% recov.om3.space = 'native';
-recov.ka.sim = nan(N, 1);
-recov.ka.est = nan(N, 1);
-recov.ka.space = 'log';
+recov.om3.sim = nan(N, 1);
+recov.om3.est = nan(N, 1);
+recov.om3.space = 'native';
+% recov.ka.sim = nan(N, 1);
+% recov.ka.est = nan(N, 1);
+% recov.ka.space = 'log';
 recov.ze.sim = nan(N, 1);
 recov.ze.est = nan(N, 1);
 recov.ze.space = 'log';
@@ -55,8 +55,8 @@ for i = 1:N
 
         % store simulated params
         recov.om2.sim(i) = sim.p_prc.om(2);
-        % recov.om3.sim(i) = sim.p_prc.om(3);
-        recov.ka.sim(i) = sim.p_prc.ka(2);
+        recov.om3.sim(i) = sim.p_prc.om(3);
+        % recov.ka.sim(i) = sim.p_prc.ka(2);
         recov.ze.sim(i) = sim.p_obs.ze;
 
         % recover
@@ -69,8 +69,8 @@ for i = 1:N
     
         % store recovered params
         recov.om2.est(i) = est.p_prc.om(2);
-        % recov.om3.est(i) = est.p_prc.om(3);
-        recov.ka.est(i) = est.p_prc.ka(2);
+        recov.om3.est(i) = est.p_prc.om(3);
+        % recov.ka.est(i) = est.p_prc.ka(2);
         recov.ze.est(i) = est.p_obs.ze;
 
         % store fit metrics
@@ -89,7 +89,7 @@ for i = 1:N
 
 end
 
-save('cbbu_HGF_3level_recov3.mat', 'recov');
+save('cbbu_HGF_3level_recov4.mat', 'recov');
 recovery_figures(recov);
 
 

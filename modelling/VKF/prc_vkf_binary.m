@@ -30,13 +30,15 @@ learning_rate = nan(n,1);
 volatility = nan(n,1);
 prediction_error = nan(n,1);
 volatility_error = nan(n,1);
+posterior_variance = nan(n, 1);
 
 sigmoid = @(x)1./(1+exp(-x));
 
 for t  = 1:n      
     o = u(t);
     predictions(t) = m;    
-    volatility(t) = v;    
+    volatility(t) = v;
+    posterior_variance(t) = w;
     
     mpre        = m;
     wpre        = w;
@@ -87,8 +89,9 @@ traj = struct;
 traj.mu1hat = mu1hat;
 traj.predictions = predictions;
 traj.volatility = volatility;
-traj.wt = wt;
+traj.wt = wt; % learning rate
 traj.da = da;
+traj.posterior_variance = posterior_variance;
 
 
 

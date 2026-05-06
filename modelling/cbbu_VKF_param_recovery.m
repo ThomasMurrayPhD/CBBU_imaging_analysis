@@ -31,6 +31,13 @@
 %       omega:  r = .992
 %       w0:     r = .172 (flatline) 
 %       ze:     r = .830
+% 
+%   recov6
+%       set v0 and w0 to .2
+%       I think we stick with this one
+% 
+%   recov7
+%       just for a laaf, let's set omegasa to 16
 
 
 addpath('VKF');
@@ -63,9 +70,9 @@ recov.omega.sim = nan(N, 1);
 recov.omega.est = nan(N, 1);
 recov.omega.space = 'log';
 
-recov.w0.sim = nan(N, 1);
-recov.w0.est = nan(N, 1);
-recov.w0.space = 'log';
+% recov.w0.sim = nan(N, 1);
+% recov.w0.est = nan(N, 1);
+% recov.w0.space = 'log';
 
 recov.ze.sim = nan(N, 1);
 recov.ze.est = nan(N, 1);
@@ -90,7 +97,7 @@ for i = 1:N
         recov.lambda.sim(i) = sim.p_prc.lambda;
         % recov.v0.sim(i)     = sim.p_prc.v0;
         recov.omega.sim(i)  = sim.p_prc.omega;
-        recov.w0.sim(i)     = sim.p_prc.w0;
+        % recov.w0.sim(i)     = sim.p_prc.w0;
         recov.ze.sim(i)     = sim.p_obs.ze;
 
         % recover
@@ -105,7 +112,7 @@ for i = 1:N
         recov.lambda.est(i) = est.p_prc.lambda;
         % recov.v0.est(i)     = est.p_prc.v0;
         recov.omega.est(i)  = est.p_prc.omega;
-        recov.w0.est(i)     = est.p_prc.w0;
+        % recov.w0.est(i)     = est.p_prc.w0;
         recov.ze.est(i)     = est.p_obs.ze;
 
         % store fit metrics
@@ -123,7 +130,7 @@ for i = 1:N
 
 end
 
-save('cbbu_VKF_recov5.mat', 'recov');
+save('cbbu_VKF_recov7.mat', 'recov');
 recovery_figures(recov);
 
 
