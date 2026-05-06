@@ -2,14 +2,12 @@
 #SBATCH -D /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/
 #SBATCH -A LAWSON-SL3-CPU
 #SBATCH -c 4
-#SBATCH -a 37
+#SBATCH -a 95-99
 #SBATCH -p cclake
 #SBATCH -t 00:30:00
 #SBATCH --mem 32G
 #SBATCH -o MP2RAGE_prepare_logs/MP2RAGE_prepare_%A_%a.out
 
-
-### set -a to 1-N when ready
 
 
 set -euo pipefail
@@ -25,7 +23,7 @@ module load spm/spm12
 #----------------------------------------------------------------------------------------------#
 
 # Specify BIDS root directory here
-BIDS_root=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS
+BIDS_root=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS_dropouts
 
 # Specify centre_images script directory
 centre_dir=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/centre_images/
