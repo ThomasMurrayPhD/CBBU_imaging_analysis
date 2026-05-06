@@ -10,7 +10,7 @@ prc_config.ommu(2) = -3;
 prc_config.omsa(2) = 4;
 
 prc_config.ommu(3) = -6; 
-prc_config.omsa(3) = 4;
+prc_config.omsa(3) = .1;
 
 prc_config = tapas_align_priors(prc_config);
 

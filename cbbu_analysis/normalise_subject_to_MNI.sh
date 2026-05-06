@@ -21,6 +21,9 @@ fi
 # Get subject ID for this job (e.g. "sub-01")
 sub_id=$(printf "sub-%02d" $SLURM_ARRAY_TASK_ID)
 
+# Specify BIDS root directory here
+BIDS_root=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS
+
 # Transformations
 idx=$(( SLURM_ARRAY_TASK_ID-1 )) # deals with the weird index at the end of the transformation files (i.e. sub-01 -> 0, sub-02 -> 1, sub-44 -> 43)
 MP2RAGE_to_template_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/ANTs_iteration_5/T1TMP_${sub_id}_acq-whole_UNI_MP2RAGE_brain_N4_centred${idx}0GenericAffine.mat"
