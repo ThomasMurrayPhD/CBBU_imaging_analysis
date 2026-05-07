@@ -11,7 +11,16 @@
 %   fix om3, free om2, free ka2 (why not)
 % 
 % recov 4
-%   try ehgf
+%   try ehgf - it works
+%   om3: priormu = 0, priorsa = 4, r=.830
+% 
+% recov5
+%   let's try lower om3 and widen the prior, just to see recoverable
+%   range... - this doesn't recover so well. 
+% 
+% recov6 - om3mu = -3, om3sa = 4
+% 
+% recov7 - try to replicate recov4...
 
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
@@ -91,7 +100,7 @@ for i = 1:N
 
 end
 
-save('cbbu_HGF_3level_recov4.mat', 'recov');
+save('cbbu_HGF_3level_recov7.mat', 'recov');
 recovery_figures(recov);
 
 
