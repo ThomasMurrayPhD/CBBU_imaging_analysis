@@ -1,8 +1,6 @@
 % function to run parameter recovery on HGF_2level
 
 
-% for recov2 I've set logzesa to 8 (was set to 1 before)
-
 
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');

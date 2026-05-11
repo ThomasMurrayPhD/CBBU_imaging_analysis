@@ -17,7 +17,7 @@ model_fits = cell(44,1);
 for i = 1:44
 
     % sub directory
-    sub_dir = ['..\..\DATA\sub-', num2str(i, '%02i'), '\task_fmri\'];
+    sub_dir = ['task_data\sub-', num2str(i, '%02i'), '\'];
 
     % load data
     run1_fname = dir(fullfile(sub_dir, ['sub-', num2str(i, '%02i'), '_facehouse-MRI_run1*.mat'])).name;

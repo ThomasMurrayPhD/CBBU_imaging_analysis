@@ -16,10 +16,10 @@ optim_config = tapas_quasinewton_optim_config;
 % optim_config.nRandInit = 4;
 
 % set priors
-prc_config.ommu(2) = -4;
-prc_config.omsa(2) = 16;
-prc_config.ommu(3) = -6;
-prc_config.omsa(3) = 16;
+prc_config.ommu(2) = -3;
+prc_config.omsa(2) = 4;
+prc_config.ommu(3) = -3;
+prc_config.omsa(3) = 4;
 prc_config.logkasa(2) = 0; % free kappa2, fix om2 (a la Iglesias)
 prc_config.update_type = 'uhgf';
 prc_config = align_priors(prc_config);
@@ -30,15 +30,15 @@ prc_config = align_priors(prc_config);
 N=200;
 
 % preallocate space
-% recov.om2.sim = nan(N, 1);
-% recov.om2.est = nan(N, 1);
-% recov.om2.space = 'native';
+recov.om2.sim = nan(N, 1);
+recov.om2.est = nan(N, 1);
+recov.om2.space = 'native';
 recov.om3.sim = nan(N, 1);
 recov.om3.est = nan(N, 1);
 recov.om3.space = 'native';
-recov.ka.sim = nan(N, 1);
-recov.ka.est = nan(N, 1);
-recov.ka.space = 'log';
+% recov.ka.sim = nan(N, 1);
+% recov.ka.est = nan(N, 1);
+% recov.ka.space = 'log';
 recov.ze.sim = nan(N, 1);
 recov.ze.est = nan(N, 1);
 recov.ze.space = 'log';
@@ -93,5 +93,5 @@ for i = 1:N
 end
 
 
-save('uHGF_3level_test_recov.mat', 'recov');
+save('uHGF_3level_test_recov2.mat', 'recov');
 recovery_figures(recov);

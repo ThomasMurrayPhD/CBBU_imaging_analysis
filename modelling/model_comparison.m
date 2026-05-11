@@ -1,8 +1,7 @@
 % Model comparison using VBA toolbox
 
-
 % Name models as folder names
-model_names = {'HGF_2level', 'RW', 'SuttonK1', 'VKF'};
+model_names = {'HGF_2level', 'HGF_3level', 'uHGF_3level', 'RW', 'SuttonK1', 'VKF'};
 N_models = numel(model_names);
 
 %% Load model fits

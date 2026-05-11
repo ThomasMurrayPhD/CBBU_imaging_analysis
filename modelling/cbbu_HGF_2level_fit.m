@@ -1,5 +1,6 @@
 % function to fit 2level HGF
 
+
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
 run2 = importdata('sub-01_facehouse-MRI_run2_15-01-24_11-35-43.mat');

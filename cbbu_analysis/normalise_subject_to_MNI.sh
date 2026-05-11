@@ -18,6 +18,8 @@ if [ ! -d "normalise_subject_to_MNI_logs" ]; then
     mkdir "normalise_subject_to_MNI_logs"
 fi
 
+module load fsl/6.0.7
+
 # Get subject ID for this job (e.g. "sub-01")
 sub_id=$(printf "sub-%02d" $SLURM_ARRAY_TASK_ID)
 
