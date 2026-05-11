@@ -1,7 +1,5 @@
 % function to run parameter recovery on HGF_2level
 
-
-
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
 run2 = importdata('sub-01_facehouse-MRI_run2_15-01-24_11-35-43.mat');
@@ -49,6 +47,7 @@ for i = 1:N
                     prc_config,...
                     obs_config,...
                     optim_config);
+
     
         % store recovered params
         recov.om2.est(i) = est.p_prc.om(2);
@@ -68,11 +67,10 @@ for i = 1:N
         
     end
     
-    
 
 end
 
-save('cbbu_HGF_2level_recov2.mat', 'recov');
+save('cbbu_HGF_2level_recov.mat', 'recov');
 recovery_figures(recov);
 
 

@@ -1,7 +1,7 @@
 % Model comparison using VBA toolbox
 
 % Name models as folder names
-model_names = {'HGF_2level', 'HGF_3level', 'uHGF_3level', 'RW', 'SuttonK1', 'VKF'};
+model_names = {'uHGF_2level', 'uHGF_3level', 'RW', 'SuttonK1', 'VKF'};
 N_models = numel(model_names);
 
 %% Load model fits
@@ -21,6 +21,8 @@ for iP = 1:44
 end
 valid = ~(isnan(LMEs) + isinf(LMEs));
 LMEs_valid = LMEs(~any(~valid, 2), :);
+
+% LMEs_valid(19,:) = []; % this person has the highest across all models...
 
 
 %% Model comparison
