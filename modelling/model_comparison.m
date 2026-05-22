@@ -23,7 +23,7 @@ valid = ~(isnan(LMEs) + isinf(LMEs));
 LMEs_valid = LMEs(~any(~valid, 2), :);
 
 % LMEs_valid(19,:) = []; % this person has the highest across all models...
-
+% LMEs_valid = LMEs_valid(~any(LMEs_valid < -10000, 2), :); % some for 3L Iglesias 
 
 %% Model comparison
 options.modelNames = model_names;

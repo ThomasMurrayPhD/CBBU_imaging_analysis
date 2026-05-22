@@ -1,19 +1,7 @@
 % function to run parameter recovery on Sutton K1 model
 
-
-% recovery 1:
-%   fix rhat to 1, free vhat1 (incorrect), free h1, free mu, free ze
-% 
-% recovery 2:
-%   fix vhat1 to .5,  fix h1 to .001, free rhat1, free mu, free ze
-% 
-% recovery 3:
-%   fix vhat1, h1, and rhat1, free mu, free ze
-%   - good, but mu crashes after ~2.7
-% 
-% recovery 3:
-%   fix vhat1, h1, and rhat1, free mu (priormu = 1), free ze
-
+toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+run(fullfile(toolboxroot, 'setup.m'));
 
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
@@ -23,9 +11,10 @@ u = double([run1.cue == run1.outcome; run2.cue == run2.outcome]);
 % load models
 [prc_config, obs_config] = cbbu_SuttonK1_config;
 
+
 % load optim algorithm
-optim_config = tapas_quasinewton_optim_config;
-optim_config.nRandInit = 4;
+optim_config = quasinewton_optim_config;
+% optim_config.nRandInit = 4;
 
 % run recovery
 N=200;
@@ -56,7 +45,7 @@ for i = 1:N
     
     try
         % simulate data with sampleModel
-        sim = tapas_sampleModel(u, prc_config, obs_config);
+        sim = sampleModel(u, prc_config, obs_config);
 
         % store simulated params
         recov.mu.sim(i) = sim.p_prc.mu;
@@ -65,7 +54,7 @@ for i = 1:N
         recov.ze.sim(i) = sim.p_obs.ze;
 
         % recover
-        est = tapas_fitModel(...
+        est = fitModel(...
                     sim.y,...
                     sim.u,...
                     prc_config,...
@@ -94,7 +83,7 @@ for i = 1:N
 
 end
 
-save('cbbu_SuttonK1_recov4.mat', 'recov');
+save('cbbu_SuttonK1_recov.mat', 'recov');
 recovery_figures(recov);
 
 

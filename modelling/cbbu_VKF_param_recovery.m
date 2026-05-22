@@ -1,46 +1,8 @@
 % function to run parameter recovery on VKF model
-% 
-% 
-% Tests:
-%   All parameters free (recov1):
-%       lambda: r = .597
-%       v0:     r = .221 (flatline)
-%       omega:  r = .980
-%       w0:     r = .220 (flatline)
-%       ze:     r = .806
-%   
-%   Fix v0 to .2 (recov2)
-%       lambda: r = .639
-%       omega:  r = .994
-%       w0 :    r = .239 (flatline)
-%       ze:     r = .765
-% 
-%   Fix w0 to 0.2802 (recov3)
-%       lambda: r = .491
-%       v0:     r = .264 (flatline)
-%       omega:  r = .983
-%       ze:     r = .743
-% 
-%   Fix both v0 (.2) and w0 (.2802) (recov4)
-%       lambda: r = .635
-%       omega:  r = .997
-%       ze:     r = .873
-% 
-%   Ok so what if we fix v0 but set small prior on w0 (sa=1) (recov5)
-%       lambda: r = .643
-%       omega:  r = .992
-%       w0:     r = .172 (flatline) 
-%       ze:     r = .830
-% 
-%   recov6
-%       set v0 and w0 to .2
-%       I think we stick with this one
-% 
-%   recov7
-%       just for a laaf, let's set omegasa to 16
-
 
 addpath('VKF');
+toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+run(fullfile(toolboxroot, 'setup.m'));
 
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
@@ -51,7 +13,7 @@ u = double([run1.cue == run1.outcome; run2.cue == run2.outcome]);
 [prc_config, obs_config] = cbbu_VKF_config;
 
 % load optim algorithm
-optim_config = tapas_quasinewton_optim_config;
+optim_config = quasinewton_optim_config;
 optim_config.nRandInit = 4;
 
 % run recovery
@@ -90,7 +52,7 @@ for i = 1:N
 
     try
         % simulate data with sampleModel
-        sim = tapas_sampleModel(u, prc_config, obs_config);
+        sim = sampleModel(u, prc_config, obs_config);
 
         
         % store simulated params
@@ -101,7 +63,7 @@ for i = 1:N
         recov.ze.sim(i)     = sim.p_obs.ze;
 
         % recover
-        est = tapas_fitModel(...
+        est = fitModel(...
                     sim.y,...
                     sim.u,...
                     prc_config,...
@@ -130,7 +92,7 @@ for i = 1:N
 
 end
 
-save('cbbu_VKF_recov7.mat', 'recov');
+save('cbbu_VKF_recov.mat', 'recov');
 recovery_figures(recov);
 
 

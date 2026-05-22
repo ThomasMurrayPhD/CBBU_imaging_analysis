@@ -10,22 +10,9 @@ run2 = importdata('sub-01_facehouse-MRI_run2_15-01-24_11-35-43.mat');
 u = [run1.cue == run1.outcome; run2.cue == run2.outcome];
 
 % load configs
-prc_config = uhgf_binary_config();
-obs_config = unitsq_sgm_config();
-optim_config = tapas_quasinewton_optim_config;
-% optim_config.nRandInit = 4;
-
-% set priors
-prc_config.ommu(2) = -3;
-prc_config.omsa(2) = 4;
-prc_config.ommu(3) = -3;
-prc_config.omsa(3) = 4;
-prc_config.logkamu(2) = 0; 
-prc_config.logkasa(2) = 0; 
-prc_config.update_type = 'uhgf';
-prc_config = align_priors(prc_config);
-
-
+[prc_config, obs_config] = cbbu_uHGF_3level_config;
+optim_config = quasinewton_optim_config;
+optim_config.nRandInit = 4;
 
 % run recovery
 N=200;
@@ -94,5 +81,5 @@ for i = 1:N
 end
 
 
-save('cbbu_uHGF_3level_recov2.mat', 'recov');
+save('cbbu_uHGF_3level_recov.mat', 'recov');
 recovery_figures(recov);

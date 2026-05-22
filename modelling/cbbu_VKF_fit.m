@@ -1,6 +1,9 @@
 % function to fit VKF
 
 addpath('VKF');
+toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+run(fullfile(toolboxroot, 'setup.m'));
+
 
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
@@ -11,7 +14,7 @@ u = double([run1.cue == run1.outcome; run2.cue == run2.outcome]);
 [prc_config, obs_config] = cbbu_VKF_config;
 
 % load optim algorithm
-optim_config = tapas_quasinewton_optim_config;
+optim_config = quasinewton_optim_config;
 optim_config.nRandInit = 4;
 
 % Loop through files and fit
@@ -38,7 +41,7 @@ for i = 1:44
     while ~success && attempt < max_attempts
         
         try
-            model_fits{i} = tapas_fitModel(...
+            model_fits{i} = fitModel(...
                     y,...
                     u,...
                     prc_config,...

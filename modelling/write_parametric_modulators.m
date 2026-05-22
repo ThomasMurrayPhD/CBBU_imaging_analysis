@@ -13,3 +13,4 @@
 % 
 % Might need to email someone about this, it's not so clear
 
+fits = importdata('cbbu_uHGF_2level_model_fits.mat');

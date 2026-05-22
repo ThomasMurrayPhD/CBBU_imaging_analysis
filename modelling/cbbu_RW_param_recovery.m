@@ -1,5 +1,8 @@
 % function to run parameter recovery on RW model
 
+toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+run(fullfile(toolboxroot, 'setup.m'));
+
 % get input
 run1 = importdata('sub-01_facehouse-MRI_run1_15-01-24_11-23-08.mat');
 run2 = importdata('sub-01_facehouse-MRI_run2_15-01-24_11-35-43.mat');
@@ -9,7 +12,7 @@ u = double([run1.cue == run1.outcome; run2.cue == run2.outcome]);
 [prc_config, obs_config] = cbbu_RW_config;
 
 % load optim algorithm
-optim_config = tapas_quasinewton_optim_config;
+optim_config = quasinewton_optim_config;
 optim_config.nRandInit = 4;
 
 % run recovery
@@ -34,14 +37,14 @@ for i = 1:N
     
     try
         % simulate data with sampleModel
-        sim = tapas_sampleModel(u, prc_config, obs_config);
+        sim = sampleModel(u, prc_config, obs_config);
         
         % store simulated params
         recov.al.sim(i) = sim.p_prc.al;
         recov.ze.sim(i) = sim.p_obs.ze;
 
         % recover
-        est = tapas_fitModel(...
+        est = fitModel(...
                     sim.y,...
                     sim.u,...
                     prc_config,...
