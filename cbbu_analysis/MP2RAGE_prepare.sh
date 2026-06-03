@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -D /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/
+#SBATCH -D /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/
 #SBATCH -A LAWSON-SL3-CPU
 #SBATCH -c 4
 #SBATCH -a 95-99
@@ -26,7 +26,7 @@ module load spm/spm12
 BIDS_root=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS_dropouts
 
 # Specify centre_images script directory
-centre_dir=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_analysis/centre_images/
+centre_dir=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/centre_images/
 
 # Get subject ID for this job (e.g. "sub-01")
 sub_id=$(printf "sub-%02d" $SLURM_ARRAY_TASK_ID)
