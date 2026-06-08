@@ -9,6 +9,8 @@
 #SBATCH -o MP2RAGE_prepare_logs/MP2RAGE_prepare_%A_%a.out
 
 
+# Disable HDF5 file locking on network filesystems
+export HDF5_USE_FILE_LOCKING='FALSE'
 
 set -euo pipefail
 
