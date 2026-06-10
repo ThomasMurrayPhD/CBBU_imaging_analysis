@@ -2,6 +2,7 @@
 
 % Name models as folder names
 model_names = {'uHGF_2level', 'uHGF_3level', 'RW', 'SuttonK1', 'VKF'};
+
 N_models = numel(model_names);
 
 %% Load model fits

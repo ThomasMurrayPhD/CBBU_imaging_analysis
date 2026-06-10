@@ -2,7 +2,7 @@
 #SBATCH -D /home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/
 #SBATCH -A LAWSON-SL3-CPU
 #SBATCH -c 4
-#SBATCH -a 1-44
+#SBATCH -a 95-99
 #SBATCH -p cclake
 #SBATCH -t 8:00:00
 #SBATCH --mem 32G
@@ -39,7 +39,7 @@ template_fname=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_
 echo "Starting ANTS Registration..."
 
 
-# Linear registration to 1mm MNI template (for use with SPM)
+# Linear and nonlinear registration of MP2RAGE to template
 antsRegistration \
     --verbose 1 \
     --dimensionality 3 \
