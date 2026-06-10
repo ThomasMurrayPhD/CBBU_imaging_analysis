@@ -57,14 +57,29 @@ idx=$(( SLURM_ARRAY_TASK_ID-1 )) # deals with the weird index at the end of the 
 
 #MP2RAGE_to_template_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/ANTs_iteration_5/T1TMP_${sub_id}_acq-whole_UNI_MP2RAGE_brain_N4_centred${idx}0GenericAffine.mat"
 #MP2RAGE_to_template_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/ANTs_iteration_5/T1TMP_${sub_id}_acq-whole_UNI_MP2RAGE_brain_N4_centred${idx}1Warp.nii.gz"
-MP2RAGE_to_template_affine="/${BIDS_root}/${sub_id}/anat/MP2RAGE_centred_to_template0GenericAffine.mat" #Changed for dropout participants
-MP2RAGE_to_template_SyN="/${BIDS_root}/${sub_id}/anat/MP2RAGE_centred_to_template1Warp.nii.gz"          #Changed for dropout participants
+#MP2RAGE_to_template_affine="/${BIDS_root}/${sub_id}/anat/MP2RAGE_centred_to_template0GenericAffine.mat" #Changed for dropout participants
+#MP2RAGE_to_template_SyN="/${BIDS_root}/${sub_id}/anat/MP2RAGE_centred_to_template1Warp.nii.gz"          #Changed for dropout participants
 
 template_to_1mm_MNI_affine="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-1mmMNI0GenericAffine.mat"
 template_to_1mm_MNI_SyN="/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_study_template/CBBU_template_5iter-to-1mmMNI1Warp.nii.gz"
 centre_transform_mat="${BIDS_root}/${sub_id}/anat/${sub_id}_affine-transform-to-centre.mat"
 
 # Check for missing files before running anything
+# for f in \
+#     "${run1_fname}.nii.gz" \
+#     "${run2_fname}.nii.gz" \
+#     "${invPE_fname}.nii.gz" \
+#     "${uni_fname}.nii.gz" \
+#     "${uni_fname}_WMmask.nii.gz" \
+#     "${SBref_fname}.nii.gz" \
+#     "${MP2RAGE_to_template_affine}" \
+#     "${MP2RAGE_to_template_SyN}" \
+#     "${template_to_1mm_MNI_affine}" \
+#     "${template_to_1mm_MNI_SyN}" \
+#     "${centre_transform_mat}"; do
+#     [ -f "$f" ] || { echo "ERROR: Missing file $f"; exit 1; }
+# done
+
 for f in \
     "${run1_fname}.nii.gz" \
     "${run2_fname}.nii.gz" \
@@ -72,8 +87,6 @@ for f in \
     "${uni_fname}.nii.gz" \
     "${uni_fname}_WMmask.nii.gz" \
     "${SBref_fname}.nii.gz" \
-    "${MP2RAGE_to_template_affine}" \
-    "${MP2RAGE_to_template_SyN}" \
     "${template_to_1mm_MNI_affine}" \
     "${template_to_1mm_MNI_SyN}" \
     "${centre_transform_mat}"; do
