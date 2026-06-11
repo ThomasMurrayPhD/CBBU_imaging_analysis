@@ -7,7 +7,7 @@ subs = [2:18, 20:44];
 
 % For subject 1 - the first run was 10 scans too short. The batch job has
 % been written, but I have manually deleted any stimulus onsets (and
-% associated parametric modulators) more than XXX seconds and re-run.
+% associated parametric modulators) more than 590 seconds and re-run.
 
 for iSub = subs
     
