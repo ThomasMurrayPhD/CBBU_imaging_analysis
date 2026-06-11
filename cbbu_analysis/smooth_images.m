@@ -21,9 +21,9 @@ end
 spm_smooth(input_fname,output_fname,kernel,0)
 
 % re-compress and delete if necessary
-if compressed_input
-    delete(input_fname); % delete .nii
-end
+% if compressed_input
+%     delete(input_fname); % delete .nii
+% end
 
 % compress output if necessary
 if compressed_output

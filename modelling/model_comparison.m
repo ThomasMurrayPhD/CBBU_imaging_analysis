@@ -28,7 +28,7 @@ end
 
 n_missing = arrayfun(@(x) sum(isnan(models(1).model_fits{x}.y)), 1:N_subs);
 
-threshold = 32; % 10% - excludes 2
+threshold = 33; % 10%+ - excludes 1 (one person missed exactly 10%...)
 
 LMEs(n_missing > threshold,:) = [];
 
