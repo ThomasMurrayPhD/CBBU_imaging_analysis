@@ -17,35 +17,53 @@ names = SPM.xX.name;
 % Specify spm.mat
 matlabbatch{1}.spm.stats.con.spmmat = {spmmat};
 
-% faces > houses
+% e2
 c = zeros(size(names));
-c(contains(names,'faces*bf(1)')) = 1;
-c(contains(names,'houses*bf(1)')) = -1;
-matlabbatch{1}.spm.stats.con.consess{1}.tcon.name = 'faces>houses';
+c(contains(names,'facesxe2')) = 1;
+c(contains(names,'housesxe2')) = 1;
+matlabbatch{1}.spm.stats.con.consess{1}.tcon.name = 'e2>baseline';
 matlabbatch{1}.spm.stats.con.consess{1}.tcon.weights = c;
 matlabbatch{1}.spm.stats.con.consess{1}.tcon.sessrep = 'none';
 
-% houses>faces
+% e3
 c = zeros(size(names));
-c(contains(names,'faces*bf(1)')) = -1;
-c(contains(names,'houses*bf(1)')) = 1;
-matlabbatch{1}.spm.stats.con.consess{2}.tcon.name = 'houses>faces';
+c(contains(names,'facesxe3')) = 1;
+c(contains(names,'housesxe3')) = 1;
+matlabbatch{1}.spm.stats.con.consess{2}.tcon.name = 'e3>baseline';
 matlabbatch{1}.spm.stats.con.consess{2}.tcon.weights = c;
 matlabbatch{1}.spm.stats.con.consess{2}.tcon.sessrep = 'none';
 
-% faces>baseline
+% psi2
 c = zeros(size(names));
-c(contains(names,'faces*bf(1)')) = 1;
-matlabbatch{1}.spm.stats.con.consess{3}.tcon.name = 'faces>baseline';
+c(contains(names,'facesxpsi2')) = 1;
+c(contains(names,'housesxpsi2')) = 1;
+matlabbatch{1}.spm.stats.con.consess{3}.tcon.name = 'psi2>baseline';
 matlabbatch{1}.spm.stats.con.consess{3}.tcon.weights = c;
 matlabbatch{1}.spm.stats.con.consess{3}.tcon.sessrep = 'none';
 
-% houses>baseline
+% psi3
 c = zeros(size(names));
-c(contains(names,'houses*bf(1)')) = 1;
-matlabbatch{1}.spm.stats.con.consess{4}.tcon.name = 'houses>baseline';
+c(contains(names,'facesxpsi3')) = 1;
+c(contains(names,'housesxpsi3')) = 1;
+matlabbatch{1}.spm.stats.con.consess{4}.tcon.name = 'psi3>baseline';
 matlabbatch{1}.spm.stats.con.consess{4}.tcon.weights = c;
 matlabbatch{1}.spm.stats.con.consess{4}.tcon.sessrep = 'none';
+
+% mu3
+c = zeros(size(names));
+c(contains(names,'facesxmu3')) = 1;
+c(contains(names,'housesxmu3')) = 1;
+matlabbatch{1}.spm.stats.con.consess{5}.tcon.name = 'mu3>baseline';
+matlabbatch{1}.spm.stats.con.consess{5}.tcon.weights = c;
+matlabbatch{1}.spm.stats.con.consess{5}.tcon.sessrep = 'none';
+
+% ech
+c = zeros(size(names));
+c(contains(names,'facesxech')) = 1;
+c(contains(names,'housesxech')) = 1;
+matlabbatch{1}.spm.stats.con.consess{6}.tcon.name = 'ech>baseline';
+matlabbatch{1}.spm.stats.con.consess{6}.tcon.weights = c;
+matlabbatch{1}.spm.stats.con.consess{6}.tcon.sessrep = 'none';
 
 % save batch
 save(output_batch_fname, 'matlabbatch');
