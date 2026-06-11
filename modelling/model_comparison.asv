@@ -5,12 +5,12 @@
 model_names = {'uHGF_2level', 'uHGF_3level', 'RW', 'SuttonK1'};
 N_models = numel(model_names);
 
+N_subs = numel(models(1).model_fits);
 
 %% Load model fits
 for iM = 1:N_models
     models(iM).model_fits = importdata(['cbbu_', model_names{iM}, '_model_fits.mat']);
 end
-N_subs = numel(models(1).model_fits);
 
 
 %% Get LME
@@ -28,17 +28,16 @@ end
 
 n_missing = arrayfun(@(x) sum(isnan(models(1).model_fits{x}.y)), 1:N_subs);
 
-threshold = 32; % 10% - excludes 2
-
-LMEs(n_missing > threshold,:) = [];
+% LMEs_valid(19,:) = []; % this person has the highest across all models...
+% LMEs_valid = LMEs_valid(~any(LMEs_valid < -10000, 2), :); % some for 3L Iglesias 
 
 
 %% Remove invalid
-valid = ~(isnan(LMEs) + isinf(LMEs));
-LMEs = LMEs(~any(~valid, 2), :);
+% valid = ~(isnan(LMEs) + isinf(LMEs));
+% LMEs_valid = LMEs(~any(~valid, 2), :);
 
 %% Model comparison
 options.modelNames = model_names;
-[posterior,out] = VBA_groupBMC(LMEs', options);
+[posterior,out] = VBA_groupBMC(LMEs_valid', options);
 
 
