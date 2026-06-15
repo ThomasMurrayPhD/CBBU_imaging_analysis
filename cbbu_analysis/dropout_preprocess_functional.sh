@@ -37,7 +37,7 @@ module load spm/spm12
 
 
 # Specify BIDS root directory here
-BIDS_root=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS
+BIDS_root=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/cbbu_BIDS_dropouts
 
 # Specify centre_images script directory
 centre_dir=/home/tom29/rds/rds-pal_lab-WJZDLUY2Dhw/CBBU_imaging_analysis/cbbu_analysis/centre_images
