@@ -1,8 +1,10 @@
 % Model comparison using VBA toolbox
 
+addpath(genpath('C:\Users\LabDesktop\Documents\MATLAB\VBA-toolbox-master\'));
+
 % Name models as folder names
 % model_names = {'uHGF_3level', 'RW', 'SuttonK1', 'VKF'};
-model_names = {'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2'};
+model_names = {'uHGF_2level_comb_obs', 'uHGF_3level_comb_obs', 'SuttonK1_comb_obs'};
 N_models = numel(model_names);
 
 

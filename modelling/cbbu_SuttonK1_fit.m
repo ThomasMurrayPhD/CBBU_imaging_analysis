@@ -1,6 +1,7 @@
 % function to fit Sutton K1
 
-toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+% toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+toolboxroot = 'C:\Users\LabDesktop\Documents\MATLAB\hgf-toolbox-main\hgf-toolbox-main';
 run(fullfile(toolboxroot, 'setup.m'));
 
 % get input

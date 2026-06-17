@@ -7,7 +7,7 @@ obs_config.transp_obs_fun   = @obs_HGF_comb_obs_transp;
 
 obs_config.logzetamu        = log(5); % inverse decision noise
 obs_config.logzetasa        = 2;
-obs_config.beta0mu          = 6.5000; % RT intercept
+obs_config.beta0mu          = 5.8; % RT intercept
 obs_config.beta0sa          = 4;
 obs_config.beta1mu          = 0; % Surprise
 obs_config.beta1sa          = 4;

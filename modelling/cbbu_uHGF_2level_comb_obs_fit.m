@@ -1,6 +1,7 @@
 % function to fit 2level HGF
 
-toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+% toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+toolboxroot = 'C:\Users\LabDesktop\Documents\MATLAB\hgf-toolbox-main\hgf-toolbox-main';
 run(fullfile(toolboxroot, 'setup.m'));
 
 addpath('HGF_comb_obs\')
@@ -62,7 +63,7 @@ parfor i = 1:44
                     prc_config,...
                     obs_config,...
                     optim_config);
-            if isequaln(est.c_prc.priormus, est.c_prc.priormus)
+            if isequaln(est.p_prc.ptrans, est.c_prc.priormus) && isequaln(est.p_obs.ptrans, est.c_obs.priormus)
                 success = false;
             else
                 success = true;
@@ -81,6 +82,6 @@ parfor i = 1:44
     
 end
 
-save('cbbu_uHGF_2level_comb_obs4_model_fits.mat', 'model_fits');
+save('cbbu_uHGF_2level_comb_obs_model_fits.mat', 'model_fits');
 
 
