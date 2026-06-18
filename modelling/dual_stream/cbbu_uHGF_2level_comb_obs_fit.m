@@ -67,6 +67,7 @@ parfor i = 1:numel(ptps)
                     optim_config);
             if isequaln(est.p_prc.ptrans, est.c_prc.priormus) && isequaln(est.p_obs.ptrans, est.c_obs.priormus)
                 success = false;
+                attempt = attempt + 1;
             else
                 success = true;
             end

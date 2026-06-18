@@ -79,31 +79,46 @@ parfor i = 1:N
 
     % Fit model (only if no missing trials)
     if ~any(isnan(sim.y))
-        try
-            est = fitModel(...
-                sim.y,...
-                sim.u,...
-                prc_config,...
-                obs_config,...
-                optim_config);
-            result.est = est;
-
-            if ~isinf(est.optim.LME)
-                result.LME = est.optim.LME;
-                result.AIC = est.optim.AIC;
-                result.BIC = est.optim.BIC;
-
-                for iP = 1:n_prc
-                    result.est_prc(iP) = est.p_prc.p(prc_param_idx(iP));
+        success = false;
+        attempt = 1;
+        max_attempts = 5;
+        while ~success && attempt < max_attempts
+            try
+                est = fitModel(...
+                    sim.y,...
+                    sim.u,...
+                    prc_config,...
+                    obs_config,...
+                    optim_config);
+                if isequaln(est.p_prc.ptrans, est.c_prc.priormus) && isequaln(est.p_obs.ptrans, est.c_obs.priormus)
+                    % unsuccessul fit
+                    success = false;
+                    attempt = attempt + 1;
+                else
+                    % successful fit
+                    success = true;
+                    result.est = est;
+                    if ~isinf(est.optim.LME)
+                        result.LME = est.optim.LME;
+                        result.AIC = est.optim.AIC;
+                        result.BIC = est.optim.BIC;
+        
+                        for iP = 1:n_prc
+                            result.est_prc(iP) = est.p_prc.p(prc_param_idx(iP));
+                        end
+                        for iP = 1:n_obs
+                            result.est_obs(iP) = est.p_obs.p(obs_param_idx(iP));
+                        end
+                    end
                 end
-                for iP = 1:n_obs
-                    result.est_obs(iP) = est.p_obs.p(obs_param_idx(iP));
-                end
+                
+            catch err
+                warning('parameter_recovery:fitFailed', ...
+                    'Iteration %i failed: %s', i, err.message);
+                attempt = attempt + 1;
             end
-        catch err
-            warning('parameter_recovery:fitFailed', ...
-                'Iteration %i failed: %s', i, err.message);
-        end
+        end%while
+
     end
 
     completion_times(i) = toc(iter_start);
