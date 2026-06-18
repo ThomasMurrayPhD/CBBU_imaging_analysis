@@ -1,16 +1,27 @@
 % Model comparison using VBA toolbox
 
-addpath(genpath('C:\Users\LabDesktop\Documents\MATLAB\VBA-toolbox-master\'));
+% addpath(genpath('C:\Users\LabDesktop\Documents\MATLAB\VBA-toolbox-master\'));
 
 % Name models as folder names
-% model_names = {'uHGF_3level', 'RW', 'SuttonK1', 'VKF'};
-model_names = {'uHGF_2level_comb_obs', 'uHGF_3level_comb_obs', 'SuttonK1_comb_obs'};
+stream = 'dual';
+% model_names = {'uHGF_2level', 'uHGF_3level', 'RW', 'SuttonK1'};
+model_names = {'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2', 'SuttonK1_comb_obs', 'RW_comb_obs'};
+
+% model_names = {'uHGF_2level_comb_obs1', 'uHGF_3level_comb_obs1', ...
+%     'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2', ...
+%     'uHGF_2level_comb_obs3', 'uHGF_3level_comb_obs3', ...
+%     'SuttonK1_comb_obs', 'RW_comb_obs'};
+
+% model_names = {'uHGF_3level_comb_obs1','uHGF_3level_comb_obs2','uHGF_3level_comb_obs3'};
+
+
 N_models = numel(model_names);
 
 
 %% Load model fits
 for iM = 1:N_models
-    models(iM).model_fits = importdata(['cbbu_', model_names{iM}, '_model_fits.mat']);
+    d = importdata([stream, '_stream\cbbu_', model_names{iM}, '_model_fits.mat']);
+    models(iM).model_fits = d.model_fits;
 end
 N_subs = numel(models(1).model_fits);
 
@@ -39,7 +50,7 @@ LMEs(n_missing > threshold,:) = [];
 % valid = ~(isnan(LMEs) + isinf(LMEs));
 % LMEs = LMEs(~any(~valid, 2), :);
 
-% LMEs(any(LMEs < -9000, 2), :) = [];
+% LMEs(any(LMEs < -10000, 2), :) = [];
 
 %% Model comparison
 options.modelNames = model_names;
