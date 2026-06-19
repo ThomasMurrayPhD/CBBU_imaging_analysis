@@ -1,18 +1,22 @@
 % Model comparison using VBA toolbox
 
-% addpath(genpath('C:\Users\LabDesktop\Documents\MATLAB\VBA-toolbox-master\'));
+addpath(genpath('C:\Users\LabDesktop\Documents\MATLAB\VBA-toolbox-master\'));
 
 % Name models as folder names
 stream = 'dual';
 % model_names = {'uHGF_2level', 'uHGF_3level', 'RW', 'SuttonK1'};
-model_names = {'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2', 'SuttonK1_comb_obs', 'RW_comb_obs'};
+% model_names = {'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2', 'SuttonK1_comb_obs', 'RW_comb_obs'};
+model_names = {'uHGF_3level_comb_obs2', 'uHGF_3level_comb_obs2b'} 
+
 
 % model_names = {'uHGF_2level_comb_obs1', 'uHGF_3level_comb_obs1', ...
 %     'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2', ...
 %     'uHGF_2level_comb_obs3', 'uHGF_3level_comb_obs3', ...
 %     'SuttonK1_comb_obs', 'RW_comb_obs'};
-
+% 
 % model_names = {'uHGF_3level_comb_obs1','uHGF_3level_comb_obs2','uHGF_3level_comb_obs3'};
+% 
+% model_names = {'uHGF_2level_comb_obs1','uHGF_2level_comb_obs2','uHGF_2level_comb_obs3'};
 
 
 N_models = numel(model_names);
@@ -47,8 +51,8 @@ LMEs(n_missing > threshold,:) = [];
 
 
 %% Remove invalid
-% valid = ~(isnan(LMEs) + isinf(LMEs));
-% LMEs = LMEs(~any(~valid, 2), :);
+valid = ~(isnan(LMEs) + isinf(LMEs));
+LMEs = LMEs(~any(~valid, 2), :);
 
 % LMEs(any(LMEs < -10000, 2), :) = [];
 

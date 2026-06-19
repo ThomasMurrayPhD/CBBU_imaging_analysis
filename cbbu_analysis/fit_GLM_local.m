@@ -3,7 +3,8 @@
 
 BIDS_root = 'F:\cbbu_BIDS\';
 
-subs = [3:18, 20:44];
+subs = [2:18, 20:44];
+
 
 % For subject 1 - the first run was 10 scans too short. The batch job has
 % been written, but I have manually deleted any stimulus onsets (and
@@ -32,10 +33,10 @@ for iSub = subs
     end
     
     % parametric modulators
-    run1_modulators     = [BIDS_root, 'sub-', num2str(iSub, '%02i'), '\GLM\uHGF_2level_parametric_modulators\run_1_parametric_modulators.mat'];
-    run2_modulators     = [BIDS_root, 'sub-', num2str(iSub, '%02i'), '\GLM\uHGF_2level_parametric_modulators\run_2_parametric_modulators.mat'];
-    output_batch_fname  = [BIDS_root, 'sub-', num2str(iSub, '%02i'), '\GLM\uHGF_2level_parametric_modulators\first_level_batch.mat'];
-    spm_output_dir      = [BIDS_root, 'sub-', num2str(iSub, '%02i'), '\GLM\uHGF_2level_parametric_modulators\'];
+    run1_modulators     = [BIDS_root, 'sub-', num2str(iSub, '%02i'), '\GLM\uHGF_3level_comb_obs2_parametric_modulators\run_1_parametric_modulators.mat'];
+    run2_modulators     = [BIDS_root, 'sub-', num2str(iSub, '%02i'), '\GLM\uHGF_3level_comb_obs2_parametric_modulators\run_2_parametric_modulators.mat'];
+    output_batch_fname  = [BIDS_root, 'sub-', num2str(iSub, '%02i'), '\GLM\uHGF_3level_comb_obs2_parametric_modulators\first_level_batch.mat'];
+    spm_output_dir      = [BIDS_root, 'sub-', num2str(iSub, '%02i'), '\GLM\uHGF_3level_comb_obs2_parametric_modulators\'];
     runjob = true;
     
     

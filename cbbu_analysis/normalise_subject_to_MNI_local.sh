@@ -30,9 +30,12 @@ for sub in $(seq -w 01 44); do
 
     # List of input images to normalise
     input_images=(
-        "${BIDS_root}/${sub_id}/GLM/uHGF_2level_parametric_modulators/con_0001.nii"
-        "${BIDS_root}/${sub_id}/GLM/uHGF_2level_parametric_modulators/con_0002.nii"
-        "${BIDS_root}/${sub_id}/GLM/uHGF_2level_parametric_modulators/con_0003.nii"
+        "${BIDS_root}/${sub_id}/GLM/uHGF_3level_comb_obs2_parametric_modulators/con_0001.nii"
+        "${BIDS_root}/${sub_id}/GLM/uHGF_3level_comb_obs2_parametric_modulators/con_0002.nii"
+        "${BIDS_root}/${sub_id}/GLM/uHGF_3level_comb_obs2_parametric_modulators/con_0003.nii"
+        "${BIDS_root}/${sub_id}/GLM/uHGF_3level_comb_obs2_parametric_modulators/con_0004.nii"
+        "${BIDS_root}/${sub_id}/GLM/uHGF_3level_comb_obs2_parametric_modulators/con_0005.nii"
+        "${BIDS_root}/${sub_id}/GLM/uHGF_3level_comb_obs2_parametric_modulators/con_0006.nii"
     )
     
 

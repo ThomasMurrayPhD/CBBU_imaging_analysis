@@ -1,7 +1,7 @@
 % function to fit 2level HGF
 
-toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
-% toolboxroot = 'C:\Users\LabDesktop\Documents\MATLAB\hgf-toolbox-main\hgf-toolbox-main';
+% toolboxroot = 'C:\Users\Tom\Documents\MATLAB\Toolboxes\hgf-toolbox-main\hgf-toolbox-main';
+toolboxroot = 'C:\Users\LabDesktop\Documents\MATLAB\hgf-toolbox-main\hgf-toolbox-main';
 run(fullfile(toolboxroot, 'setup.m'));
 
 addpath('HGF_comb_obs\')
@@ -84,6 +84,6 @@ parfor i = 1:numel(ptps)
     
 end
 
-save('cbbu_uHGF_3level_comb_obs3_model_fits.mat', 'model_fits', 'ptps');
+save('cbbu_uHGF_3level_comb_obs2b_model_fits.mat', 'model_fits', 'ptps');
 
 
