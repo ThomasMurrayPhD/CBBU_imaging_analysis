@@ -12,12 +12,16 @@ conda activate cbbu
 
 
 # map sub-IDs to directory numbers
+#declare -A subjects=(
+#    ["sub-95"]="37461"
+#    ["sub-96"]="37578"
+#    ["sub-97"]="37517"
+#    ["sub-98"]="39610"
+#    ["sub-99"]="39839"
+#)
+
 declare -A subjects=(
     ["sub-95"]="37461"
-    ["sub-96"]="37578"
-    ["sub-97"]="37517"
-    ["sub-98"]="39610"
-    ["sub-99"]="39839"
 )
 
 # Loop through the dictionary
