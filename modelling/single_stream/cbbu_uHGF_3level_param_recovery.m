@@ -17,69 +17,106 @@ optim_config.nRandInit = 4;
 % run recovery
 N=200;
 
-% preallocate space
-recov.om2.sim = nan(N, 1);
-recov.om2.est = nan(N, 1);
-recov.om2.space = 'native';
-recov.om3.sim = nan(N, 1);
-recov.om3.est = nan(N, 1);
-recov.om3.space = 'native';
-% recov.ka.sim = nan(N, 1);
-% recov.ka.est = nan(N, 1);
-% recov.ka.space = 'log';
-recov.ze.sim = nan(N, 1);
-recov.ze.est = nan(N, 1);
-recov.ze.space = 'log';
-recov.LME = nan(N, 1); % store LME
-recov.AIC = nan(N, 1); % store AIC
-recov.BIC = nan(N, 1); % store BIC
+% Parameters to recover
+prc_param_names = {'om2', 'om3'};
+prc_param_idx   = [13, 14];
+prc_param_space = {'native', 'native'};
+obs_param_names = {'zeta'};
+obs_param_idx   = 1;
+obs_param_space = {'log'};
 
-recov.sim = cell(N, 1);
-recov.est = cell(N, 1);
-
-% Loop
-for i = 1:N
-    
-    try
-        % simulate data with sampleModel
-        sim = sampleModel(u, prc_config, obs_config);
-
-        % store simulated params
-        recov.om2.sim(i) = sim.p_prc.om(2);
-        recov.om3.sim(i) = sim.p_prc.om(3);
-        % recov.ka.sim(i) = sim.p_prc.ka(2);
-        recov.ze.sim(i) = sim.p_obs.ze;
-
-        % recover
-        est = fitModel(...
-                    sim.y,...
-                    sim.u,...
-                    prc_config,...
-                    obs_config,...
-                    optim_config);
-    
-        % store recovered params
-        recov.om2.est(i) = est.p_prc.om(2);
-        recov.om3.est(i) = est.p_prc.om(3);
-        % recov.ka.est(i) = est.p_prc.ka(2);
-        recov.ze.est(i) = est.p_obs.ze;
-
-        % store fit metrics
-        if ~isinf(est.optim.LME)
-            recov.LME(i) = est.optim.LME;
-            recov.AIC(i) = est.optim.AIC;
-            recov.BIC(i) = est.optim.BIC;
-        end
-
-        % store sim and est
-        recov.sim{i} = sim;
-        recov.est{i} = est;
-    catch
-        
-    end
-
-end
+recov = parameter_recovery_master_parallel( ...
+    u,...
+    prc_config,...
+    obs_config,...
+    optim_config,...
+    N,...
+    8, ...
+    prc_param_names,...
+    prc_param_idx,...
+    prc_param_space,...
+    obs_param_names,...
+    obs_param_idx,...
+    obs_param_space);
 
 
 save('cbbu_uHGF_3level_recov.mat', 'recov');
 recovery_figures(recov);
+
+
+% 
+% 
+% 
+% 
+% % preallocate space
+% recov.om2.sim = nan(N, 1);
+% recov.om2.est = nan(N, 1);
+% recov.om2.space = 'native';
+% recov.om3.sim = nan(N, 1);
+% recov.om3.est = nan(N, 1);
+% recov.om3.space = 'native';
+% % recov.ka.sim = nan(N, 1);
+% % recov.ka.est = nan(N, 1);
+% % recov.ka.space = 'log';
+% recov.ze.sim = nan(N, 1);
+% recov.ze.est = nan(N, 1);
+% recov.ze.space = 'log';
+% recov.LME = nan(N, 1); % store LME
+% recov.AIC = nan(N, 1); % store AIC
+% recov.BIC = nan(N, 1); % store BIC
+% 
+% recov.sim = cell(N, 1);
+% recov.est = cell(N, 1);
+% 
+% % Loop
+% for i = 1:N
+% 
+%     % simulate data with sampleModel
+%     sim = sampleModel(u, prc_config, obs_config);
+% 
+%     % store simulated params
+%     recov.om2.sim(i) = sim.p_prc.om(2);
+%     recov.om3.sim(i) = sim.p_prc.om(3);
+%     % recov.ka.sim(i) = sim.p_prc.ka(2);
+%     recov.ze.sim(i) = sim.p_obs.ze;
+% 
+%     success = false;
+%     attempt = 1;
+%     while ~success && attempt < 5
+%         % recover
+%         est = fitModel(...
+%                     sim.y,...
+%                     sim.u,...
+%                     prc_config,...
+%                     obs_config,...
+%                     optim_config);
+%         if isequaln(est.p_prc.ptrans, est.c_prc.priormus) && isequaln(est.p_obs.ptrans, est.c_obs.priormus)
+%             % no success
+%             success = false;
+%             attempt = attempt + 1;
+%         else
+%             % success
+%             success = true;
+% 
+%             % store recovered params
+%             recov.om2.est(i) = est.p_prc.om(2);
+%             recov.om3.est(i) = est.p_prc.om(3);
+%             % recov.ka.est(i) = est.p_prc.ka(2);
+%             recov.ze.est(i) = est.p_obs.ze;
+% 
+%             % store fit metrics
+%             recov.LME(i) = est.optim.LME;
+%             recov.AIC(i) = est.optim.AIC;
+%             recov.BIC(i) = est.optim.BIC;
+% 
+%             % store sim and est
+%             recov.sim{i} = sim;
+%             recov.est{i} = est;
+%         end
+%     end
+% 
+% end
+% 
+% 
+% save('cbbu_uHGF_3level_recov.mat', 'recov');
+% recovery_figures(recov);

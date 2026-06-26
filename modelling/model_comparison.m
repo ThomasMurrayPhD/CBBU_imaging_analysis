@@ -6,8 +6,12 @@ addpath(genpath('C:\Users\LabDesktop\Documents\MATLAB\VBA-toolbox-master\'));
 stream = 'dual';
 % model_names = {'uHGF_2level', 'uHGF_3level', 'RW', 'SuttonK1'};
 % model_names = {'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2', 'SuttonK1_comb_obs', 'RW_comb_obs'};
-model_names = {'uHGF_3level_comb_obs2', 'uHGF_3level_comb_obs2b'} 
-
+model_names = {...
+    'uHGF_2level_comb_obs1', 'uHGF_2level_comb_obs2', 'uHGF_2level_comb_obs3', ...
+    'uHGF_3level_comb_obs1', 'uHGF_3level_comb_obs2', 'uHGF_3level_comb_obs3',...
+    'SuttonK1_comb_obs', 'RW_comb_obs'};
+% model_names = {'uHGF_3level_comb_obs1', 'uHGF_3level_comb_obs2', 'uHGF_3level_comb_obs3'} ;
+fig_names = {'2a', '2b', '2c', '3a', '3b', '3c', 'SK1', 'RW'};
 
 % model_names = {'uHGF_2level_comb_obs1', 'uHGF_3level_comb_obs1', ...
 %     'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2', ...
@@ -57,7 +61,9 @@ LMEs = LMEs(~any(~valid, 2), :);
 % LMEs(any(LMEs < -10000, 2), :) = [];
 
 %% Model comparison
-options.modelNames = model_names;
+
+% options.modelNames = strrep(model_names, '_', '-');
+options.modelNames = fig_names;
 [posterior,out] = VBA_groupBMC(LMEs', options);
 
 
