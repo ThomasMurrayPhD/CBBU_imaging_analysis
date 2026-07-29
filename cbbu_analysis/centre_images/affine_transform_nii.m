@@ -1,5 +1,5 @@
 function fname_new = affine_transform_nii(mat, nii, suffix)
-% script that applies affine transformation too .nii file by adjusting
+% script that applies affine transformation to .nii file by adjusting
 % header matrix. New .nii file is saved appended with suffix.
 % 
 % Input:
