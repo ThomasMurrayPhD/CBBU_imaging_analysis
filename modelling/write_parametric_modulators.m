@@ -22,6 +22,8 @@
 % e_ch - the choice prediction error
 
 
+# % Double check run2 works (doesn't just use run1 traj again...)
+
 
 %% 3 level HGF
 clear; clc;

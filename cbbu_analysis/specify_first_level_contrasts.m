@@ -5,6 +5,8 @@ function specify_first_level_contrasts(GLM_root, output_batch_fname)
 % GLM_root = 'C:\Users\Tom\Desktop\cbbu_GLM\sub-20\GLM';
 % glm_name = 'No_parametric_modulators';
 
+# % Check whether I need bf(2) for parametric modulators...
+
 
 % get SPM.mat
 spmmat = [GLM_root, '\SPM.mat'];
@@ -16,6 +18,7 @@ names = SPM.xX.name;
 
 % Specify spm.mat
 matlabbatch{1}.spm.stats.con.spmmat = {spmmat};
+
 
 % e2
 c = zeros(size(names));
