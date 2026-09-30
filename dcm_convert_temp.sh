@@ -20,6 +20,8 @@ declare -A subjects=(
     ["sub-99"]="39839"
 )
 
+
+
 # Loop through the dictionary
 for sub in "${!subjects[@]}"; do
     dir=${subjects[$sub]}
