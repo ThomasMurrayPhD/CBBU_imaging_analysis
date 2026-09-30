@@ -12,7 +12,7 @@ model_names = {'uHGF_2level_comb_obs2', 'uHGF_3level_comb_obs2', 'SuttonK1_comb_
 %     'uHGF_2level_comb_obs3', 'uHGF_3level_comb_obs3', ...
 %     'SuttonK1_comb_obs', 'RW_comb_obs'};
 
-% model_names = {'uHGF_3level_comb_obs1','uHGF_3level_comb_obs2','uHGF_3level_comb_obs3'};
+model_names = {'uHGF_3level_comb_obs1','uHGF_3level_comb_obs2','uHGF_3level_comb_obs3'};
 
 
 N_models = numel(model_names);
