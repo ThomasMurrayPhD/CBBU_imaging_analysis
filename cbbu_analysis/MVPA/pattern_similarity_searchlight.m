@@ -17,7 +17,7 @@ sphere=((x*voxSize_mm(1)).^2+(y*voxSize_mm(2)).^2+(z*voxSize_mm(3)).^2)<=(search
 
 
 
-% practise
+% practice
 face_betas = rand(100, 100, 100, 70);
 house_betas = rand(100, 100, 100, 70);
 [xm,ym,zm]=meshgrid(-49:50,-49:50,-49:50);
@@ -28,6 +28,10 @@ mask=((xm*voxSize_mm(1)).^2+(ym*voxSize_mm(2)).^2+(zm*voxSize_mm(3)).^2)<=40^2;
 face_betas_padded = padarray(face_betas, [minMargin_vox, 0]);
 house_betas_padded = padarray(house_betas, [minMargin_vox, 0]);
 mask_padded = padarray(mask, [minMargin_vox, 0]); % might need to make logical again
+
+
+% idx of positive mask values
+[xm,ym,zm] = ind2sub(size(mask_padded), find(mask_padded(:)>0))
 
 
 
